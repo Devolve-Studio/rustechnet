@@ -24,29 +24,57 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.hover-border {
+.hover-border-once {
   position: relative;
-  padding: 12px;
-  display: inline-block;
-  z-index: 0;
+  color: #3fa9f5;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.hover-border::before {
-  content: '';
+/* Common border styles */
+.hover-border-once .border {
   position: absolute;
-  inset: 0;
-  border: 2px solid #ff6b6b;
-  border-radius: 12px;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, white, transparent);
   pointer-events: none;
-  z-index: -1;
+  opacity: 0;
+  transform: translateX(0);
 }
 
-.hover-border:hover::before {
+/* Positioning */
+.hover-border-once .top {
+  top: 0;
+}
+.hover-border-once .bottom {
+  bottom: 0;
+}
+
+/* Trigger animation ON HOVER */
+.hover-border-once:hover .top {
+  animation: top-once 0.6s ease-out forwards;
   opacity: 1;
-  transform: scale(1);
+}
+.hover-border-once:hover .bottom {
+  animation: bottom-once 0.6s ease-out forwards;
+  opacity: 1;
 }
 
+/* One-time slide animations */
+@keyframes top-once {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bottom-once {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

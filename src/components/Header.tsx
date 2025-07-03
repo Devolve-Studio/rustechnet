@@ -2,6 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
+
+    const pages = [
+        { name: "Home", href: "/" },
+        { name: "Services", href: "/services" },
+        { name: "About", href: "/about" },
+        { name: "Events", href: "/events" },
+        { name: "Blog", href: "/blog" },
+        { name: "Contact", href: "/contact" },
+    ]
+
     return (
         <header className="bg-[#0a0a0a] text-white">
             <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -13,12 +23,19 @@ export default function Header() {
 
                 {/* Navigation */}
                 <nav className="hidden md:flex space-x-2 text-md font-medium uppercase tracking-wider">
-                    <Link href="/" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">Home</Link>
-                    <Link href="/solution" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">Solutions</Link>
-                    <Link href="/about" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">About Us</Link>
-                    <Link href="/Events" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">Events</Link>
-                    <Link href="/blog" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">Blog</Link>
-                    <Link href="/contact" className="hover:text-[#ff931e] transform transition-all duration-500 hover-border">Contact Us</Link>
+                    {pages.map((link) => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        className="py-4 hover-border-once">
+                            <div className="border top"></div>
+                            <div
+                                className="hover:!text-[#ff931e] !text-white  transform transition-all duration-300 px-4">
+                                {link.name}
+                            </div>
+                            <div className="border bottom"></div>
+                    </Link>
+                        ))}
                 </nav>
             </div>
         </header>
