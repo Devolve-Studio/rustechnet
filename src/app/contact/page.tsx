@@ -34,37 +34,42 @@ export default function ContactPage() {
                 </p>
             </section>
 
-            {/* Fullscreen Map with Floating Elements */}
+            {/* Fullscreen Map with Floating Elements Only for Desktops */}
             <section className="relative w-full h-[800px]">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin"
-                    className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 contrast-125 brightness-90 transition-all duration-700 border-none z-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin&zoom=200"
+                    className="absolute inset-0 w-full h-full contrast-125 brightness-90 transition-all duration-700 border-none z-0 hidden md:block"
                     loading="lazy"
-                    style={{ pointerEvents: 'none' }}
                 ></iframe>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#171717]/50 to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#171717]/50 to-transparent z-10 hidden md:block"></div>
 
-                <div className="absolute inset-0 flex flex-col md:flex-row justify-center items-center gap-100 px-6 md:px-20 z-20">
+                <div className="relative md:absolute inset-0 flex flex-col md:flex-row justify-center items-center md:gap-100 gap-10 mt-10 md:mt-0 px-6 md:px-20 z-20">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-[#e5e5e5] p-8 rounded-xl shadow-2xl max-w-md w-full backdrop-blur-md bg-opacity-90"
+                        className="bg-[#2c2c2c] p-8 rounded-xl shadow-black shadow-2xl max-w-md w-full backdrop-blur-md bg-opacity-90"
                     >
-                        <h2 className="text-2xl font-bold mb-4 text-[#171717]">Contact Information</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-[#ededed]">Contact Information</h2>
                         <div className="space-y-4 text-md text-[#171717]">
                             <div className="flex items-center gap-4">
-                                <FaMapMarkerAlt className="text-[#3fa9f5]" />
-                                <span>Vadodara, Gujarat, India</span>
+                                <FaMapMarkerAlt className="text-[#3fa9f5] hover:text-[#ff931e] transition duration-300 mb-13" />
+                                <a href="https://maps.app.goo.gl/Wv8caidbJncQ1JEc6" target="_blank">
+                                    <span className="text-[#ededed] hover:text-[#ff931e] tartget-blank transition duration-300">
+                                        DARSHANAM TRADE CENTER,<br />
+                                        Kala Ghoda Cir, Opp. M.S. University<br />
+                                        Sayajiganj, Vadodara, Gujarat 390001
+                                    </span>
+                                </a>
                             </div>
                             <div className="flex items-center gap-4">
-                                <FaPhoneAlt className="text-[#ff931e]" />
-                                <a href="tel:+919876543210" className="hover:text-[#3fa9f5] transition">+91 98765 43210</a>
+                                <FaPhoneAlt className="text-[#ff931e] hover:text-[#3fa9f5] transition duration-300" />
+                                <a href="tel:+919876543210" className="text-[#ededed] hover:text-[#3fa9f5] transition">+91 98765 43210</a>
                             </div>
                             <div className="flex items-center gap-4">
-                                <FaEnvelope className="text-[#3fa9f5]" />
-                                <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e] transition">info@rustechnet.com</a>
+                                <FaEnvelope className="text-[#3fa9f5] hover:text-[#ff931e] transition duration-300" />
+                                <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e] transition text-[#ededed]">info@rustechnet.com</a>
                             </div>
                         </div>
                     </motion.div>
@@ -75,12 +80,12 @@ export default function ContactPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         onSubmit={handleSubmit}
-                        className="bg-[#e5e5e5] p-8 rounded-xl shadow-2xl max-w-md w-full space-y-6 border border-gray-200 backdrop-blur-md bg-opacity-90"
+                        className="relative bg-[#2c2c2c] p-8 rounded-xl shadow-black shadow-2xl max-w-md w-full space-y-6 backdrop-blur-md bg-opacity-90"
                     >
                         <div className="space-y-2">
-                            <label htmlFor="name" className="text-sm font-semibold">Your Name</label>
+                            <label htmlFor="name" className="text-sm font-semibold text-[#ededed]">Your Name</label>
                             <div className="relative">
-                                <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                                <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#2c2c2c]" />
                                 <input
                                     type="text"
                                     name="name"
@@ -95,9 +100,9 @@ export default function ContactPage() {
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-semibold">Email</label>
+                            <label htmlFor="email" className="text-sm font-semibold text-[#ededed]">Email</label>
                             <div className="relative">
-                                <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                                <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-[#2c2c2c]" />
                                 <input
                                     type="email"
                                     name="email"
@@ -112,9 +117,9 @@ export default function ContactPage() {
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-semibold">Message</label>
+                            <label htmlFor="message" className="text-sm font-semibold text-[#ededed]">Message</label>
                             <div className="relative">
-                                <FaCommentDots className="absolute left-3 top-4 text-gray-400" />
+                                <FaCommentDots className="absolute left-3 top-4 text-[#2c2c2c]" />
                                 <textarea
                                     name="message"
                                     id="message"
@@ -130,13 +135,18 @@ export default function ContactPage() {
 
                         <button
                             type="submit"
-                            className="w-full bg-[#3fa9f5] hover:bg-[#ff931e] text-white font-bold py-3 rounded-md transition-all"
+                            className="w-full bg-[#ededed] hover:bg-[#3fa9f5] hover:text-[#ededed] text-[#1c1c1c] font-bold py-3 rounded-md transition-all duration-300 transform"
                         >
                             Send Message
                         </button>
                     </motion.form>
                 </div>
             </section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin&zoom=200"
+                className="relative inset-0 w-screen h-[80vh] contrast-125 brightness-90 transition-all duration-700 border-none z-0 md:hidden block"
+                loading="lazy"
+            ></iframe>
         </main>
     );
 }
