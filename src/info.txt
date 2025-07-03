@@ -1,0 +1,2 @@
+blue = #3fa9f5
+orange = #ff931e

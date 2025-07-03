@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #e5e5e5;
   --foreground: #171717;
 }
 
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #111;
     --foreground: #ededed;
   }
 }
@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hover-border {
+  position: relative;
+  padding: 12px;
+  display: inline-block;
+  z-index: 0;
+}
+
+.hover-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid #ff6b6b;
+  border-radius: 12px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hover-border:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
