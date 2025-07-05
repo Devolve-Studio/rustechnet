@@ -1,42 +1,71 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+    const footerRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".footer-section", {
+                opacity: 0,
+                y: 60,
+                stagger: 0.2,
+                duration: 1.2,
+                ease: "power4.out",
+                scrollTrigger: {
+                    trigger: footerRef.current,
+                    start: "top 90%",
+                    toggleActions: "play none none reset",
+                },
+            });
+        }, footerRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <footer className="relative bg-[#171717] text-white pt-16 pb-8 px-6 md:px-20">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                {/* Brand & Tagline */}
-                <div>
-                    <div className="text-3xl font-extrabold mb-4 tracking-wide">
-                        <span className="text-[#3fa9f5]">RUS</span>
-                        <span className="text-[#ff931e]"> Technet</span>
-                    </div>
-                    <p className="text-base text-gray-300 leading-relaxed">
-                        At RUS Technet Solutions Pvt. Ltd., we deliver intelligent systems, automation strategies, and digital products that scale. Every project is engineered with precision, creativity, and care.
+        <footer
+            ref={footerRef}
+            className="relative w-full bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] text-white pt-28 pb-20 px-6 md:px-32 overflow-hidden"
+        >
+            {/* Decorative SVGs */}
+            <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#3fa9f5]/10 blur-3xl rounded-full" />
+            <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-[#ff931e]/10 blur-3xl rounded-full" />
+
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+                {/* Brand / About */}
+                <div className="footer-section">
+                    <h2 className="text-5xl font-black text-[#3fa9f5] mb-6">
+                        RUS <span className="text-[#ff931e]">Technet</span>
+                    </h2>
+                    <p className="text-gray-400 leading-relaxed text-lg">
+                        We engineer intelligent surveillance for energy giants — from wind to solar, from cities to silent hills.
+                        Our systems never sleep.
                     </p>
                 </div>
 
                 {/* Navigation */}
-                <div>
-                    <h3 className="text-xl font-semibold mb-5 text-[#ff931e] uppercase tracking-wider">Explore</h3>
-                    <ul className="space-y-3 text-md text-gray-300">
+                <div className="footer-section">
+                    <h3 className="text-xl font-semibold mb-6 text-[#ff931e] uppercase tracking-wider">Navigate</h3>
+                    <ul className="space-y-4 text-md text-gray-300">
                         {[
-                            { name: "Home", href: "/" },
-                            { name: "About Us", href: "/about" },
-                            { name: "Services", href: "/services" },
-                            { name: "Blog", href: "/blog" },
-                            { name: "Contact", href: "/contact" },
-                        ].map((item) => (
-                            <li key={item.href}>
-                                <Link
-                                    href={item.href}
-                                    className="group flex items-center justify-between hover:text-[#3fa9f5] transition duration-300"
-                                >
-                                    <span>{item.name}</span>
-                                    <ArrowRight
-                                        className="ml-2 w-4 h-4 text-[#ff931e] group-hover:translate-x-1 transition-transform duration-300"
-                                    />
+                            { label: "Home", href: "/" },
+                            { label: "About", href: "/about" },
+                            { label: "Services", href: "/services" },
+                            { label: "Blog", href: "/blog" },
+                            { label: "Contact", href: "/contact" },
+                        ].map(({ label, href }) => (
+                            <li key={label} className="hover:translate-x-2 transition-transform">
+                                <Link href={href} className="hover:text-[#3fa9f5]">
+                                    {label}
                                 </Link>
                             </li>
                         ))}
@@ -44,65 +73,69 @@ export default function Footer() {
                 </div>
 
                 {/* Contact Info */}
-                <div>
-                    <h3 className="text-xl font-semibold mb-5 text-[#ff931e] uppercase tracking-wider">Contact</h3>
+                <div className="footer-section">
+                    <h3 className="text-xl font-semibold mb-6 text-[#ff931e] uppercase tracking-wider">Contact</h3>
                     <ul className="space-y-4 text-md text-gray-300">
-                        <li className="flex items-center gap-3">
-                            <FaMapMarkerAlt className="text-[#3fa9f5]" />
-                            Vadodara, Gujarat, India
+                        <li className="flex gap-4 items-start">
+                            <FaMapMarkerAlt className="text-[#3fa9f5] mt-1" />
+                            <span>Vadodara, Gujarat, India – 390001</span>
                         </li>
-                        <li className="flex items-center gap-3">
+                        <li className="flex gap-4 items-center">
                             <FaEnvelope className="text-[#3fa9f5]" />
-                            <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e]">info@rustechnet.com</a>
+                            <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e]">
+                                info@rustechnet.com
+                            </a>
                         </li>
-                        <li className="flex items-center gap-3">
-                            <FaPhoneAlt className="text-[#3fa9f5]" />
-                            <a href="tel:+919876543210" className="hover:text-[#ff931e]">+91 98765 43210</a>
+                        <li className="flex gap-4 items-center">
+                            <FaPhoneAlt className="text-[#ff931e]" />
+                            <a href="tel:+919876543210" className="hover:text-[#3fa9f5]">
+                                +91 98765 43210
+                            </a>
                         </li>
                     </ul>
                 </div>
 
-                {/* Social Links */}
-                <div>
-                    <h3 className="text-xl font-semibold mb-5 text-[#ff931e] uppercase tracking-wider">Connect</h3>
-                    <div className="flex space-x-5 text-2xl text-white">
-                        <a
-                            href="https://instagram.com/rus.technet"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-[#ff931e] transition"
-                            aria-label="Instagram"
-                        >
-                            <FaInstagram />
-                        </a>
-                        <a
-                            href="https://linkedin.com/company/rustechnet"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-[#3fa9f5] transition"
-                            aria-label="LinkedIn"
-                        >
-                            <FaLinkedin />
-                        </a>
-                        <a
-                            href="mailto:info@rustechnet.com"
-                            className="hover:text-[#3fa9f5] transition"
-                            aria-label="Email"
-                        >
-                            <FaEnvelope />
-                        </a>
+                {/* Socials */}
+                <div className="footer-section">
+                    <h3 className="text-xl font-semibold mb-6 text-[#ff931e] uppercase tracking-wider">Connect</h3>
+                    <div className="flex items-center space-x-6">
+                        {[{
+                            href: "https://instagram.com/rus.technet",
+                            icon: <FaInstagram />,
+                            label: "Instagram",
+                            hoverColor: "hover:text-[#ff931e]"
+                        }, {
+                            href: "https://linkedin.com/company/rustechnet",
+                            icon: <FaLinkedin />,
+                            label: "LinkedIn",
+                            hoverColor: "hover:text-[#3fa9f5]"
+                        }, {
+                            href: "mailto:info@rustechnet.com",
+                            icon: <FaEnvelope />,
+                            label: "Email",
+                            hoverColor: "hover:text-white hover:bg-white"
+                        }].map(({ href, icon, label, hoverColor }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className={`text-white text-2xl p-3 rounded-full shadow-lg transition-all duration-300 ${hoverColor} hover:scale-110 bg-white/10 backdrop-blur-md border border-white/10`}
+                            >
+                                {icon}
+                            </a>
+                        ))}
                     </div>
-                    <p className="text-sm text-gray-500 mt-5">
-                        We'd love to hear from you.
-                    </p>
+                    <p className="text-sm text-gray-500 mt-6">We’re always listening.</p>
                 </div>
             </div>
 
-            {/* Divider & Credits */}
-            <div className="mt-14 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-                <p>© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd. All rights reserved.</p>
-                <p className="mt-2 text-gray-500">
-                    Designed & Developed by <a href="https://devolvestudio.space" target="_blank" className="text-white font-medium hover:text-[#3fa9f5]">Devolve Studio</a>
+            {/* Footer Bottom */}
+            <div className="mt-20 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
+                <p>© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
+                <p className="mt-1">
+                    Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#3fa9f5] font-semibold">Devolve Studio</a>
                 </p>
             </div>
         </footer>

@@ -97,7 +97,7 @@ export default function HeroSection() {
                                 priority={index === 0}
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-black/40 dark:bg-black/50 backdrop-blur-sm z-10" />
+                            <div className="absolute inset-0 bg-black/40 dark:bg-black/50 z-10" /> {/*backdrop-blur-xs*/}
 
                             {/* Content */}
                             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-20">

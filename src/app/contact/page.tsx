@@ -7,10 +7,12 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaCommentDots } from 'r
 export default function ContactPage() {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
 
+    // @ts-ignore
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
+    // @ts-ignore
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('🌠 Message transmitted to the mothership!');
@@ -48,16 +50,22 @@ export default function ContactPage() {
                         <li className="flex items-start gap-4">
                             <FaMapMarkerAlt className="text-[#3fa9f5] text-xl mt-1" />
                             <span>
-                DARSHANAM TRADE CENTER,<br />Kala Ghoda Cir, Opp. M.S. University<br />Sayajiganj, Vadodara, Gujarat 390001
-              </span>
+                                DARSHANAM TRADE CENTER,<br />Kala Ghoda Cir, Opp. M.S. University<br />Sayajiganj, Vadodara, Gujarat 390001
+                            </span>
                         </li>
-                        <li className="flex items-center gap-4">
-                            <FaPhoneAlt className="text-[#ff931e] text-xl" />
-                            <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
+                        <li className="flex items-start gap-4">
+                            <FaPhoneAlt className="text-[#ff931e] text-xl mt-1" />
+                            <span>
+                                Sales: <a href="tel:+918160923809" className="hover:underline">+91 81609 23809</a> (Mayur Thakor)<br />
+                                Office: <a href="tel:+919727128593" className="hover:underline">+91 97271 28593</a> (Himanshu Thakor)
+                            </span>
                         </li>
-                        <li className="flex items-center gap-4">
-                            <FaEnvelope className="text-[#3fa9f5] text-xl" />
-                            <a href="mailto:info@rustechnet.com" className="hover:underline">info@rustechnet.com</a>
+                        <li className="flex items-start gap-4">
+                            <FaEnvelope className="text-[#3fa9f5] text-xl mt-1" />
+                            <span>
+                                <a href="mailto:mayur.t@rustechnet.com" className="hover:underline">mayur.t@rustechnet.com</a><br />
+                                <a href="mailto:himanshu.t@rustechnet.com" className="hover:underline">himanshu.t@rustechnet.com</a>
+                            </span>
                         </li>
                     </ul>
                 </motion.div>
