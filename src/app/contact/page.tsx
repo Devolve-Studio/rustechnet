@@ -1,152 +1,141 @@
 'use client';
 
-import { useState } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaCommentDots } from "react-icons/fa";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaCommentDots } from 'react-icons/fa';
 
 export default function ContactPage() {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Your message has been sent! ✨");
+        alert('🌠 Message transmitted to the mothership!');
     };
 
     return (
-        <main className="bg-[#e5e5e5] text-[#171717] overflow-hidden">
-            {/* Hero Section */}
-            <section className="relative w-full bg-[var(--background)] text-[var(--foreground)] py-20 px-6 md:px-20 text-center">
-                <motion.h1
-                    initial={{ opacity: 0, y: -40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-5xl font-bold tracking-wide"
-                >
-                    Let's Build Something Together
-                </motion.h1>
-                <p className="mt-4 text-lg text-[var(--foreground)] max-w-2xl mx-auto">
-                    Connect with RUS Technet Solutions Pvt. Ltd. for project inquiries, partnership opportunities, or to simply say hello.
+        <main className="min-h-screen w-full bg-[var(--background)] text-[var(--foreground)] flex flex-col items-center overflow-hidden relative">
+            {/* Planetary Orbit Rings as Background */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200vw] h-[200vw] rounded-full border border-dashed border-[var(--foreground)] opacity-10 animate-spin-slow" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300vw] h-[300vw] rounded-full border border-dashed border-[var(--foreground)] opacity-5 animate-spin-reverse-slower" />
+
+            <motion.section
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="z-10 text-center py-24 px-6 md:px-20"
+            >
+                <h1 className="text-5xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] bg-clip-text text-transparent">
+                    Get In Touch 🚀
+                </h1>
+                <p className="max-w-2xl mx-auto mt-6 text-lg opacity-80">
+                    We are here to provide all kinds of CCTV Solutions
                 </p>
+            </motion.section>
+
+            <section className="z-10 w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 px-6 md:px-20 pb-20">
+                <motion.div
+                    initial={{ opacity: 0, x: -80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="relative bg-gradient-to-br from-[#3fa9f5]/10 to-[#ff931e]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl"
+                >
+                    <h2 className="text-3xl font-bold mb-6">📡 Contact Us</h2>
+                    <ul className="space-y-6 text-base">
+                        <li className="flex items-start gap-4">
+                            <FaMapMarkerAlt className="text-[#3fa9f5] text-xl mt-1" />
+                            <span>
+                DARSHANAM TRADE CENTER,<br />Kala Ghoda Cir, Opp. M.S. University<br />Sayajiganj, Vadodara, Gujarat 390001
+              </span>
+                        </li>
+                        <li className="flex items-center gap-4">
+                            <FaPhoneAlt className="text-[#ff931e] text-xl" />
+                            <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
+                        </li>
+                        <li className="flex items-center gap-4">
+                            <FaEnvelope className="text-[#3fa9f5] text-xl" />
+                            <a href="mailto:info@rustechnet.com" className="hover:underline">info@rustechnet.com</a>
+                        </li>
+                    </ul>
+                </motion.div>
+
+                <motion.form
+                    initial={{ opacity: 0, x: 80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    onSubmit={handleSubmit}
+                    className="relative bg-gradient-to-br from-[#ff931e]/10 to-[#3fa9f5]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6"
+                >
+                    <div className="relative">
+                        <label htmlFor="name" className="absolute left-10 top-[-10px] bg-[var(--background)] px-2 text-sm font-medium">Name</label>
+                        <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#3fa9f5]" />
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={form.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] text-[#0a0a0a]"
+                            placeholder="John Doe"
+                        />
+                    </div>
+
+                    <div className="relative">
+                        <label htmlFor="email" className="absolute left-10 top-[-10px] bg-[var(--background)] px-2 text-sm font-medium">Email</label>
+                        <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ff931e]" />
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={form.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#ff931e] text-[#0a0a0a]"
+                            placeholder="you@example.com"
+                        />
+                    </div>
+
+                    <div className="relative">
+                        <label htmlFor="message" className="absolute left-10 top-[-10px] bg-[var(--background)] px-2 text-sm font-medium">Message</label>
+                        <FaCommentDots className="absolute left-3 top-4 text-[#3fa9f5]" />
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows={5}
+                            value={form.message}
+                            onChange={handleChange}
+                            required
+                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] resize-none text-[#0a0a0a]"
+                            placeholder="Broadcast your thoughts..."
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="w-full py-3 rounded-md font-bold bg-[#3fa9f5]  hover:bg-[#ff931e] transition-all duration-300 shadow-xl text-[var(--background)]"
+                    >
+                        Send A Message
+                    </button>
+                </motion.form>
             </section>
 
-            {/* Fullscreen Map with Floating Elements Only for Desktops */}
-            <section className="relative w-full h-[800px]">
+            {/* Starfield effect */}
+            <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+                <div className="w-full h-full bg-[radial-gradient(circle,_#3fa9f5_1px,_transparent_1px)] [background-size:20px_20px] opacity-5"></div>
+            </div>
+
+            {/* Map - stylized as a satellite window */}
+            <div className="relative w-full h-[400px] mt-20 rounded-xl overflow-hidden shadow-inner">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin&zoom=200"
-                    className="absolute inset-0 w-full h-full contrast-125 brightness-90 transition-all duration-700 border-none z-0 hidden md:block"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin"
+                    className="w-full h-full border-none grayscale-[30%] contrast-125 brightness-90"
                     loading="lazy"
                 ></iframe>
-                <div className="absolute inset-0 bg-gradient-to-br from-[#171717]/50 to-transparent z-10 hidden md:block"></div>
-
-                <div className="relative md:absolute inset-0 flex flex-col md:flex-row justify-center items-center md:gap-100 gap-10 mt-10 md:mt-0 px-6 md:px-20 z-20">
-                    {/* Contact Info */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="bg-[var(--background)] p-8 rounded-xl shadow-black shadow-2xl max-w-md w-full backdrop-blur-md bg-opacity-90"
-                    >
-                        <h2 className="text-2xl font-bold mb-4 text-[var(--foreground)]">Contact Information</h2>
-                        <div className="space-y-4 text-md text-[#171717]">
-                            <div className="flex items-center gap-4">
-                                <FaMapMarkerAlt className="text-[#3fa9f5] hover:text-[#ff931e] transition duration-300 mb-13" />
-                                <a href="https://maps.app.goo.gl/Wv8caidbJncQ1JEc6" target="_blank">
-                                    <span className="text-[var(--foreground)] hover:text-[#ff931e] tartget-blank transition duration-300">
-                                        DARSHANAM TRADE CENTER,<br />
-                                        Kala Ghoda Cir, Opp. M.S. University<br />
-                                        Sayajiganj, Vadodara, Gujarat 390001
-                                    </span>
-                                </a>
-                            </div>
-                            <div className="flex items-center gap-4">
-                                <FaPhoneAlt className="text-[#ff931e] hover:text-[#3fa9f5] transition duration-300" />
-                                <a href="tel:+919876543210" className="text-[var(--foreground)] hover:text-[#3fa9f5] transition">+91 98765 43210</a>
-                            </div>
-                            <div className="flex items-center gap-4">
-                                <FaEnvelope className="text-[#3fa9f5] hover:text-[#ff931e] transition duration-300" />
-                                <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e] transition text-[var(--foreground)]">info@rustechnet.com</a>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    {/* Contact Form */}
-                    <motion.form
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        onSubmit={handleSubmit}
-                        className="relative bg-[var(--background)] p-8 rounded-xl shadow-black shadow-2xl max-w-md w-full space-y-6 backdrop-blur-md bg-opacity-90"
-                    >
-                        <div className="space-y-2">
-                            <label htmlFor="name" className="text-sm font-semibold text-[var(--foreground)]">Your Name</label>
-                            <div className="relative">
-                                <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#2c2c2c]" />
-                                <input
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    value={form.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] bg-gray-50"
-                                    placeholder="John Doe"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label htmlFor="email" className="text-sm font-semibold text-[var(--foreground)]">Email</label>
-                            <div className="relative">
-                                <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-[#2c2c2c]" />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    value={form.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#ff931e] bg-gray-50"
-                                    placeholder="you@example.com"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-semibold text-[var(--foreground)]">Message</label>
-                            <div className="relative">
-                                <FaCommentDots className="absolute left-3 top-4 text-[#2c2c2c]" />
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    rows={4}
-                                    value={form.message}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full pl-10 pr-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] bg-gray-50 resize-none"
-                                    placeholder="Tell us about your idea..."
-                                />
-                            </div>
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="w-full dark:bg-[#ededed] bg-[#1c1c1c] hover:bg-[#3fa9f5] hover:text-[var(--foreground)] text-[var(--background)] font-bold py-3 rounded-md transition-all duration-300 transform"
-                        >
-                            Send Message
-                        </button>
-                    </motion.form>
-                </div>
-            </section>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.3400048137305!2d73.18110937586641!3d22.30297744279727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf005fc4d501%3A0xdf9ccf9d7275c0b3!2sRus%20Technet%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751525858870!5m2!1sen!2sin&zoom=200"
-                className="relative inset-0 w-screen h-[80vh] contrast-125 brightness-90 transition-all duration-700 border-none z-0 md:hidden block"
-                loading="lazy"
-            ></iframe>
+            </div>
         </main>
     );
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,27 +19,39 @@ export default function Header() {
     ];
 
     return (
-        <header className="relative bg-[#0a0a0a] text-white top-0 left-0 right-0 z-50 shadow-md">
+        <motion.header
+            initial={{ y: -60, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="fixed w-full top-0 z-[100] backdrop-blur-lg bg-black/60 text-white shadow-[0_0_20px_#00000066]"
+        >
             <div className="max-w-7xl mx-auto px-6 md:px-20 py-4 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2">
+                <Link href="/" className="flex items-center space-x-3">
                     <Image src="/logo.png" alt="PKEL Logo" width={80} height={40} />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex space-x-2 text-md font-medium uppercase tracking-wider">
-                    {pages.map((link) => (
-                        <Link key={link.href} href={link.href} className="py-4 hover-border-once">
-                            <div className="border top"></div>
-                            <div className="hover:!text-[#ff931e] !text-white transform transition-all duration-300 px-4">
-                                {link.name}
-                            </div>
-                            <div className="border bottom"></div>
-                        </Link>
+                <nav className="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wide">
+                    {pages.map((link, i) => (
+                        <motion.div
+                            key={link.href}
+                            whileHover={{ y: -1 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
+                        >
+                            <Link
+                                href={link.href}
+                                className="hover-border-once relative px-2 py-2 transition-all duration-300 ease-in-out"
+                            >
+                                <div className="border top"></div>
+                                <div className="hover:!text-[#ff931e] !text-white px-2">{link.name}</div>
+                                <div className="border bottom"></div>
+                            </Link>
+                        </motion.div>
                     ))}
                 </nav>
 
-                {/* Hamburger for mobile */}
+                {/* Hamburger */}
                 <button
                     className="md:hidden focus:outline-none"
                     onClick={() => setIsOpen(true)}
@@ -49,38 +62,52 @@ export default function Header() {
             </div>
 
             {/* Mobile Drawer */}
-            <div
-                className={`fixed top-0 right-0 h-full w-64 bg-[#0a0a0a] shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                }`}
-            >
-                <div className="flex items-center justify-between p-4 border-b border-gray-700">
-                    <span className="text-lg font-semibold">Menu</span>
-                    <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
-                        <X className="w-6 h-6 text-white" />
-                    </button>
-                </div>
-                <nav className="flex flex-col mt-4 space-y-4 px-6">
-                    {pages.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-white text-lg hover:text-[#ff931e] transition-colors"
-                            onClick={() => setIsOpen(false)}
+            <AnimatePresence>
+                {isOpen && (
+                    <>
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            className="fixed top-0 right-0 h-full w-64 bg-[#111111] shadow-xl z-50 flex flex-col"
                         >
-                            {link.name}
-                        </Link>
-                    ))}
-                </nav>
-            </div>
+                            <div className="flex items-center justify-between p-4 border-b border-gray-700">
+                                <span className="text-lg font-semibold">Menu</span>
+                                <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
+                                    <X className="w-6 h-6 text-white" />
+                                </button>
+                            </div>
+                            <nav className="flex flex-col mt-6 px-6 space-y-5 text-base font-medium">
+                                {pages.map((link) => (
+                                    <motion.div
+                                        key={link.href}
+                                        whileTap={{ scale: 0.98 }}
+                                        whileHover={{ x: 6 }}
+                                    >
+                                        <Link
+                                            href={link.href}
+                                            className="text-white hover:text-[#ff931e] transition-colors"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </nav>
+                        </motion.div>
 
-            {/* Backdrop */}
-            {isOpen && (
-                <div
-                    className="fixed inset-0 bg-black/40 z-40 md:hidden"
-                    onClick={() => setIsOpen(false)}
-                ></div>
-            )}
-        </header>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 0.4 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 bg-black z-40 md:hidden"
+                            onClick={() => setIsOpen(false)}
+                        />
+                    </>
+                )}
+            </AnimatePresence>
+        </motion.header>
     );
 }

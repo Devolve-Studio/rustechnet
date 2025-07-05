@@ -1,8 +1,8 @@
 'use client';
 
 import CountUp from 'react-countup';
-import { FaSun, FaWind, FaUsers, FaProjectDiagram, FaRegClock } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 export default function StatsCounterSection() {
     const [ref, inView] = useInView({ triggerOnce: true });
@@ -11,46 +11,78 @@ export default function StatsCounterSection() {
         {
             title: 'Projects',
             end: 120,
-            icon: <FaProjectDiagram className="text-yellow-400 w-8 h-8" />,
+            gifLight: '/gifs/project-dark.gif',
+            gifDark: '/gifs/project-light.gif',
         },
         {
             title: 'Solar Plants',
             end: 45,
-            icon: <FaSun className="text-orange-500 w-8 h-8" />,
+            gifLight: '/gifs/solar-dark.gif',
+            gifDark: '/gifs/solar-light.gif',
         },
         {
             title: 'Wind Plants',
             end: 38,
-            icon: <FaWind className="text-blue-400 w-8 h-8" />,
+            gifLight: '/gifs/wind-dark.gif',
+            gifDark: '/gifs/wind-light.gif',
         },
         {
             title: 'Customers',
             end: 200,
-            icon: <FaUsers className="text-green-400 w-8 h-8" />,
+            gifLight: '/gifs/customer-dark.gif',
+            gifDark: '/gifs/customer-light.gif',
         },
         {
             title: 'Upcoming Projects',
             end: 12,
-            icon: <FaRegClock className="text-purple-400 w-8 h-8" />,
+            gifLight: '/gifs/upcoming-dark.gif',
+            gifDark: '/gifs/upcoming-light.gif',
         },
     ];
 
     return (
-        <section className="dark:bg-[#0a0a0a] bg-[var(--background py-16 px-6 text-[var(--foreground)]">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" ref={ref}>
+        <section className="dark:bg-[#0a0a0a] bg-[var(--background)] py-16 px-6 text-[var(--foreground)]">
+            <motion.div
+                ref={ref}
+                className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.15,
+                        },
+                    },
+                }}
+            >
                 {stats.map((stat, idx) => (
-                    <div
+                    <motion.div
                         key={idx}
                         className="dark:bg-[#111111] bg-[#ededed] rounded-2xl p-6 flex flex-col items-center justify-center shadow-xl hover:scale-105 transition-transform duration-300"
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+                        }}
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.97 }}
                     >
-                        {stat.icon}
+                        <picture>
+                            <source srcSet={stat.gifDark} media="(prefers-color-scheme: dark)" />
+                            <img
+                                src={stat.gifLight}
+                                alt={stat.title}
+                                className="w-16 h-16 object-contain"
+                                loading="lazy"
+                            />
+                        </picture>
                         <h3 className="text-4xl font-bold mt-3">
                             {inView && <CountUp end={stat.end} duration={2} />}+
                         </h3>
                         <p className="mt-1 text-sm text-gray-400 uppercase tracking-wide">{stat.title}</p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }
