@@ -87,7 +87,7 @@ export default function Header() {
                     opacity: opacityTransform,
                     transition: 'all 0.3s ease-in-out'
                 }}
-                className="fixed w-full top-0 z-[100] bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] backdrop-blur-xl text-white shadow-[0_0_40px_#00000099] border-b border-[#3fa9f5]/30"
+                className="fixed w-full top-0 z-[100] bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] backdrop-blur-xl text-white shadow-[0_0_40px_#00000099] border-b border-[#3fa9f5]/30 font-orbitron"
                 ref={scrollRef}
             >
                 <motion.div

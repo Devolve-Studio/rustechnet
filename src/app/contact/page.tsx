@@ -49,9 +49,8 @@ export default function ContactPage() {
                     <ul className="space-y-6 text-base">
                         <li className="flex items-start gap-4">
                             <FaMapMarkerAlt className="text-[#3fa9f5] text-xl mt-1" />
-                            <span>
-                                DARSHANAM TRADE CENTER,<br />Kala Ghoda Cir, Opp. M.S. University<br />Sayajiganj, Vadodara, Gujarat 390001
-                            </span>
+                            <span>SF21 DARSHANAM TRADE CENTRE-3,<br />  NR SURYA PALACE HOTEL,
+                                <br />SAYAJIGUNJ, <br /> GUJARAT - 390020.</span>
                         </li>
                         <li className="flex items-start gap-4">
                             <FaPhoneAlt className="text-[#ff931e] text-xl mt-1" />

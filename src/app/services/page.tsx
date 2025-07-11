@@ -48,6 +48,17 @@ export default function ServicesPage() {
 
             {/* SVG Blob Transition */}
             <section className="relative w-full py-32 bg-[var(--background)]">
+                <motion.div
+                    animate={{
+                        rotate: [0, 360],
+                    }}
+                    transition={{
+                        duration: 50,
+                        ease: "linear",
+                        repeat: Infinity,
+                    }}
+                    className="absolute w-[300px] h-[300px] border border-dashed border-[#ffffff22] rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+                />
                 <svg className="absolute top-0 left-0 w-full h-64 opacity-10" viewBox="0 0 600 600" fill="#ff931e">
                     <path d="M300,0C465,0,600,135,600,300C600,465,465,600,300,600C135,600,0,465,0,300C0,135,135,0,300,0Z" />
                 </svg>

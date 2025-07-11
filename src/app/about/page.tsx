@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import HeroBanner from "@/components/HeroBanner";
+import Timeline from "@/components/Timeline";
+import MissionSection from "@/components/MissionSection";
 
 export default function AboutUs() {
     return (
@@ -113,61 +115,7 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="relative min-h-screen py-24 px-6 md:px-20 bg-gradient-to-tl from-[#0a0a0a] via-[#1a1a1a] to-[#0a0a0a] text-white overflow-hidden">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center max-w-4xl mx-auto z-10 relative"
-                >
-                    <h2 className="text-5xl font-black mb-6 bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] text-transparent bg-clip-text">
-                        Industry Recognition & Timeline
-                    </h2>
-                    <p className="text-xl opacity-70">
-                        Each step we take is powered by precision, passion, and progress. Scroll to orbit our highlights.
-                    </p>
-                    <section className="relative min-h-screen py-32 px-6 md:px-20 text-white overflow-hidden">
-                        <div className="relative max-w-5xl mx-auto border-l-4 border-dashed border-[#3fa9f5]/30 pl-10">
-                            {[{
-                                year: "2016",
-                                title: "Foundation Laid",
-                                desc: "RUS Technet began its journey with a passion to redefine surveillance for renewable energy."
-                            }, {
-                                year: "2018",
-                                title: "First Wind Farm Deployed",
-                                desc: "Completed full-scale monitoring setup for 120+ turbines across Gujarat."
-                            }, {
-                                year: "2020",
-                                title: "Solar Scaling",
-                                desc: "Introduced AI-based detection and infrared thermal cameras for solar plants."
-                            }, {
-                                year: "2023",
-                                title: "Private Limited Company",
-                                desc: "RUS Technet Solutions Pvt. Ltd. is registered with GSTIN and CIN. Growth continues."
-                            }].map((item, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, x: -40 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, delay: i * 0.2 }}
-                                    className="mb-16 relative group"
-                                >
-                                    <div className="absolute -left-[27px] top-1 w-5 h-5 bg-[#ff931e] border-[3px] border-white rounded-full z-10 transition group-hover:scale-125"></div>
-                                    <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl p-6 shadow-xl">
-                                        <div className="text-[#3fa9f5] font-bold text-lg mb-2">{item.year}</div>
-                                        <h3 className="text-2xl font-semibold text-white mb-1">{item.title}</h3>
-                                        <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        {/* Decorative dots and animation */}
-                        <div className="absolute inset-0 bg-[radial-gradient(circle,_#ff931e_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0 pointer-events-none animate-pulse-slow"></div>
-                    </section>
-                </motion.div>
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,_#3fa9f5_1px,_transparent_1px)] [background-size:40px_40px] opacity-5 z-0 animate-pulse"></div>
-            </section>
+            <Timeline />
 
             <section className="relative max-h-[70vh] w-full bg-black text-white overflow-hidden px-6 md:px-20 py-32 flex items-center justify-center">
                 {/* Background overlays & starfield */}
@@ -179,83 +127,76 @@ export default function AboutUs() {
 
                 {/* Floating orbit animation */}
                 <motion.div
-                    animate={{
-                        rotate: [0, 360],
-                    }}
-                    transition={{
-                        duration: 50,
-                        ease: "linear",
-                        repeat: Infinity,
-                    }}
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 50, ease: "linear", repeat: Infinity }}
                     className="absolute w-[600px] h-[600px] border border-dashed border-[#ffffff22] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
                 />
 
-                {/* Message box */}
-                <motion.div
-                    initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="z-10 max-w-3xl text-center bg-white/5 border border-white/10 backdrop-blur-xl p-10 rounded-xl shadow-2xl"
-                >
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-[#ff931e]">
-                        Message from the Managing Director
-                    </h2>
-                    <p className="text-lg leading-relaxed text-gray-200">
-                    <span className="italic">
-                        "We don’t just install cameras — we build safety systems that breathe
-                        with the rhythm of the wind, and shine with the sun."
-                    </span>
-                        <br />
-                        <span className="text-[#3fa9f5] font-bold block mt-4">– Mayur Thakor</span>
-                    </p>
-                </motion.div>
-            </section>
-
-            <section className="min-h-screen py-32 px-6 md:px-20 bg-[var(--background)] text-[var(--foreground)] relative overflow-hidden">
-                {/* Decorative blobs */}
-                <div className="absolute -top-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
-                <div className="absolute -bottom-40 right-0 w-[300px] h-[300px] bg-[#ff931e]/20 blur-3xl rounded-full animate-pulse-slower z-0" />
-                <div className="absolute inset-0 bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] [background-size:30px_30px] opacity-5 z-0" />
-
-                <div className="max-w-6xl mx-auto relative z-10">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 30 }}
+                {/* Messages container */}
+                <div className="z-10 grid gap-10 md:grid-cols-3 max-w-7xl w-full">
+                    {/* Director 1 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl font-black mb-12 text-center bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] text-transparent bg-clip-text"
+                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
                     >
-                        Our Vision & Mission
-                    </motion.h2>
+                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
+                            Message from the Director
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
+        <span className="italic">
+          "We don’t just install cameras — we build safety systems that breathe
+          with the rhythm of the wind, and shine with the sun."
+        </span>
+                            <br />
+                            <span className="text-[#3fa9f5] font-bold block mt-4">– Mayur Thakor</span>
+                        </p>
+                    </motion.div>
 
-                    <div className="grid md:grid-cols-2 gap-12">
-                        <motion.div
-                            initial={{ opacity: 0, x: -60 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="bg-gradient-to-br from-[#3fa9f5]/10 to-[#3fa9f5]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
-                        >
-                            <h3 className="text-3xl font-extrabold text-[#3fa9f5] mb-4">Vision</h3>
-                            <p className="text-base leading-relaxed text-white/80">
-                                To redefine security for renewable energy infrastructures by creating seamless, intelligent, and eco-aligned
-                                surveillance solutions that inspire global trust.
-                            </p>
-                        </motion.div>
+                    {/* Director 2 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
+                            Message from the Director
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
+        <span className="italic">
+          "In every frame we capture, we commit to peace of mind and
+          uninterrupted clarity."
+        </span>
+                            <br />
+                            <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Thakor</span>
+                        </p>
+                    </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 60 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="bg-gradient-to-br from-[#ff931e]/10 to-[#ff931e]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
-                        >
-                            <h3 className="text-3xl font-extrabold text-[#ff931e] mb-4">Mission</h3>
-                            <p className="text-base leading-relaxed text-white/80">
-                                To continuously evolve tech-based protection systems tailored for solar farms, wind turbines, and future-ready
-                                facilities with seamless integration and real-time response.
-                            </p>
-                        </motion.div>
-                    </div>
+                    {/* Director 3 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 60 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
+                            Message from the Director
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
+        <span className="italic">
+          "Technology is only powerful when paired with trust — that's what we
+          aim to earn with every installation."
+        </span>
+                            <br />
+                            <span className="text-[#3fa9f5] font-bold block mt-4">– Lorem Ipsum</span>
+                        </p>
+                    </motion.div>
                 </div>
             </section>
+
+            <MissionSection />
 
             <section className="min-h-[50vh] bg-gradient-to-br from-[#1c1c1c] to-[#0a0a0a] text-white flex flex-col items-center justify-center px-6 md:px-20 relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle,_#ff931e_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0 animate-[pulse_10s_infinite]" />

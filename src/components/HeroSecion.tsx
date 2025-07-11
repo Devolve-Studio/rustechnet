@@ -22,23 +22,23 @@ const slides = [
         link: "/products",
     },
     {
-        src: "/images/slides/slide3.jpeg",
-        heading: "SS Feed Hoppers",
+        src: "/slides/LanNetwork.jpg",
+        heading: "Lan Networking",
         link: "/products",
     },
     {
-        src: "/images/slides/slide4.jpeg",
-        heading: "Conveyor Systems",
+        src: "/slides/EPABX.jpg",
+        heading: "EPABX Intercom System",
         link: "/products",
     },
     {
-        src: "/images/slides/slide5.jpeg",
-        heading: "Storage Tanks",
+        src: "/slides/PASystems.jpg",
+        heading: "PA Systems",
         link: "/products",
     },
     {
-        src: "/images/slides/slide6.jpeg",
-        heading: "Blister Packaging Systems",
+        src: "/slides/CCTV.jpg",
+        heading: "CCTV Solutions",
         link: "/products",
     },
     {
