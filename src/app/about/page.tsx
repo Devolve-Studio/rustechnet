@@ -61,26 +61,39 @@ export default function AboutUs() {
             </section>
 
             {/* Visual Split Section */}
-            <section className="py-24 px-6 md:px-20 bg-[#f8f8f8] dark:bg-[#121212] flex flex-col md:flex-row items-center gap-20">
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex-1"
-                >
-                    <h2 className="text-3xl font-bold text-[#ff931e] mb-4">Solutions That Scale</h2>
-                    <p className="opacity-80 text-lg">
-                        Whether you manage a remote wind farm or a solar power substation, RTSPL delivers scalable surveillance that evolves with your infrastructure.
-                    </p>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex-1"
-                >
-                    <div className="w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-xl" />
-                </motion.div>
+            <section className="py-12 px-6 md:px-20 bg-[#f8f8f8] dark:bg-[#121212]">
+                <div
+                    className="flex flex-col md:flex-row items-center gap-0 max-w-7xl mx-auto">
+                    <motion.div
+                        initial={{opacity: 0, x: 50}}
+                        whileInView={{opacity: 1, x: 0}}
+                        transition={{duration: 0.6}}
+                        className="flex-1 h-64"
+                    >
+                        {/*<div className="w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-xl" />*/}
+                        <picture>
+                            <img
+                                src="/Windmill.gif"
+                                alt="Windmill GIF"
+                                className="w-64 h-64 object-contain scale-130 select-none"
+                                draggable="false"
+                                loading="lazy"
+                            />
+                        </picture>
+                    </motion.div>
+                    <motion.div
+                        initial={{opacity: 0, x: -50}}
+                        whileInView={{opacity: 1, x: 0}}
+                        transition={{duration: 0.6}}
+                        className="flex-1"
+                    >
+                        <h2 className="text-3xl font-bold text-[#ff931e] mb-4">Solutions That Scale</h2>
+                        <p className="opacity-80 text-lg">
+                            Whether you manage a remote wind farm or a solar power substation, RTSPL delivers scalable
+                            surveillance that evolves with your infrastructure.
+                        </p>
+                    </motion.div>
+                </div>
             </section>
 
             <section className="py-24 px-6 md:px-20 bg-[var(--background)] text-[var(--foreground)]">
