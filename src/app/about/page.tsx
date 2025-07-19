@@ -8,6 +8,7 @@ import Link from "next/link";
 import HeroBanner from "@/components/HeroBanner";
 import Timeline from "@/components/Timeline";
 import MissionSection from "@/components/MissionSection";
+import MapContent from "@/components/MapContent";
 
 export default function AboutUs() {
     return (
@@ -203,13 +204,52 @@ export default function AboutUs() {
           aim to earn with every installation."
         </span>
                             <br />
-                            <span className="text-[#3fa9f5] font-bold block mt-4">– Lorem Ipsum</span>
+                            <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Patel</span>
                         </p>
                     </motion.div>
                 </div>
             </section>
 
             <MissionSection />
+
+            <MapContent
+                activeStates={["Gujarat", "Maharashtra", "Karnataka", "Tamil Nadu"]}
+                projects={[
+                    {
+                        state: "Gujarat",
+                        companies: [
+                            "Powerica Limited",
+                            "KPI Green Energy Pvt. Ltd.",
+                            "Opera Energy Pvt. Ltd.",
+                            "Onix Renewable Limited",
+                            "GP Wind Pvt. Ltd.",
+                            "Sundrops Energia Pvt. Ltd.",
+                        ],
+                    },
+                    {
+                        state: "Maharashtra",
+                        companies: [
+                            "Fourth Partner Energy Pvt. Ltd.",
+                            "Serentica Renewables India Pvt. Ltd.",
+                        ],
+                    },
+                    {
+                        state: "Karnataka",
+                        companies: [
+                            "JSW Renewable Energy Pvt. Ltd.",
+                            "Fourth Partner Energy Pvt. Ltd.",
+                            "Solaris Electrical Services Pvt. Ltd.",
+                        ],
+                    },
+                    {
+                        state: "Tamil Nadu",
+                        companies: [
+                            "Watsun Infrabuild Pvt. Ltd.",
+                            "AMPLUS Iru Pvt. Ltd.",
+                        ],
+                    },
+                ]}
+            />
 
             <section className="min-h-[50vh] bg-gradient-to-br from-[#1c1c1c] to-[#0a0a0a] text-white flex flex-col items-center justify-center px-6 md:px-20 relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle,_#ff931e_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0 animate-[pulse_10s_infinite]" />
