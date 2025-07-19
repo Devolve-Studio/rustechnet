@@ -9,6 +9,7 @@ import HeroBanner from "@/components/HeroBanner";
 import Timeline from "@/components/Timeline";
 import MissionSection from "@/components/MissionSection";
 import MapContent from "@/components/MapContent";
+import DirectorsMessage from "@/components/DirectorsMessage";
 
 export default function AboutUs() {
     return (
@@ -39,22 +40,44 @@ export default function AboutUs() {
                     </p>
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            "Project-Specific Managers",
-                            "Skilled CAD Design Team",
-                            "Local Support & Service Center",
-                            "Tailored AMC Services",
-                            "Rapid Response Teams",
-                            "Industry-Certified Equipment"
+                            {
+                                title: "Project-Specific Managers",
+                                description:
+                                    "Dedicated experts guiding your project from blueprint to final handover, ensuring no detail is overlooked.",
+                            },
+                            {
+                                title: "Skilled CAD Design Team",
+                                description:
+                                    "Precision-driven designers who transform ideas into accurate, scalable, and executable plans.",
+                            },
+                            {
+                                title: "Local Support & Service Center",
+                                description:
+                                    "On-ground presence for faster service, minimal downtime, and long-term partnership reliability.",
+                            },
+                            {
+                                title: "Tailored AMC Services",
+                                description:
+                                    "Annual Maintenance Contracts crafted to match your system’s exact needs — no fluff, just function.",
+                            },
+                            {
+                                title: "Rapid Response Teams",
+                                description:
+                                    "Swift deployment units ready to tackle critical faults and ensure operational continuity.",
+                            },
+                            {
+                                title: "Industry-Certified Equipment",
+                                description:
+                                    "We deploy only rigorously tested, certified hardware that meets international safety and quality standards.",
+                            },
                         ].map((point, i) => (
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-[#ededed] dark:bg-[#1c1c1c] p-6 rounded-xl shadow-lg"
                             >
-                                <h3 className="text-xl font-semibold mb-2 text-[#3fa9f5]">{point}</h3>
-                                <p className="text-sm opacity-70">
-                                    Reliable support and custom solutions for each project’s success.
-                                </p>
+                                <h3 className="text-xl font-semibold mb-2 text-[#3fa9f5]">{point.title}</h3>
+                                <p className="!text-sm opacity-70">{point.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -123,92 +146,17 @@ export default function AboutUs() {
                             className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg border border-white/10"
                         >
                             <h3 className="text-xl font-semibold mb-2 text-[#ff931e]">{item.title}</h3>
-                            <p className="text-sm text-gray-300">{item.desc}</p>
+                            <p className="text-sm dark:text-gray-300 text-gray-700">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
-            <Timeline />
+            {/* Timeline Section */}
+            {/*<Timeline />*/}
 
-            <section className="relative max-h-[70vh] w-full bg-black text-white overflow-hidden px-6 md:px-20 py-32 flex items-center justify-center">
-                {/* Background overlays & starfield */}
-                <div className="absolute inset-0 bg-[url('/images/director-bg.jpg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-black/70 backdrop-blur-md z-0" />
-                <div className="absolute inset-0 bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] [background-size:40px_40px] opacity-5 z-0 animate-pulse-slow" />
-                <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-[#3fa9f5]/20 blur-3xl rounded-full z-0 animate-ping" />
-                <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-[#ff931e]/20 blur-3xl rounded-full z-0 animate-ping" />
-
-                {/* Floating orbit animation */}
-                <motion.div
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 50, ease: "linear", repeat: Infinity }}
-                    className="absolute w-[600px] h-[600px] border border-dashed border-[#ffffff22] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
-                />
-
-                {/* Messages container */}
-                <div className="z-10 grid gap-10 md:grid-cols-3 max-w-7xl w-full">
-                    {/* Director 1 */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
-                    >
-                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
-                            Message from the Director
-                        </h2>
-                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
-        <span className="italic">
-          "We don’t just install cameras — we build safety systems that breathe
-          with the rhythm of the wind, and shine with the sun."
-        </span>
-                            <br />
-                            <span className="text-[#3fa9f5] font-bold block mt-4">– Mayur Thakor</span>
-                        </p>
-                    </motion.div>
-
-                    {/* Director 2 */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
-                    >
-                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
-                            Message from the Director
-                        </h2>
-                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
-        <span className="italic">
-          "In every frame we capture, we commit to peace of mind and
-          uninterrupted clarity."
-        </span>
-                            <br />
-                            <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Thakor</span>
-                        </p>
-                    </motion.div>
-
-                    {/* Director 3 */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-center bg-white/5 border border-white/10 backdrop-blur-xl p-8 rounded-xl shadow-2xl"
-                    >
-                        <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#ff931e]">
-                            Message from the Director
-                        </h2>
-                        <p className="text-base md:text-lg leading-relaxed text-gray-200">
-        <span className="italic">
-          "Technology is only powerful when paired with trust — that's what we
-          aim to earn with every installation."
-        </span>
-                            <br />
-                            <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Patel</span>
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
+            {/* Director Messages Section */}
+            <DirectorsMessage />
 
             <MissionSection />
 

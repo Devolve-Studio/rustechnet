@@ -46,7 +46,7 @@ export default function Footer() {
                     <h2 className="text-5xl font-black text-[#3fa9f5] mb-6">
                         RUS <span className="text-[#ff931e]">Technet</span>
                     </h2>
-                    <p className="text-gray-400 leading-relaxed text-lg">
+                    <p className="text-gray-400 leading-relaxed !text-lg">
                         We engineer intelligent surveillance for energy giants — from wind to solar, from cities to silent hills.
                         Our systems never sleep.
                     </p>
@@ -81,15 +81,27 @@ export default function Footer() {
                             <span>Vadodara, Gujarat, India – 390001</span>
                         </li>
                         <li className="flex gap-4 items-center">
-                            <FaEnvelope className="text-[#3fa9f5]" />
-                            <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e]">
-                                info@rustechnet.com
+                            <FaPhoneAlt className="text-[#ff931e]" />
+                            <a href="tel:+919727128593" className="hover:text-[#3fa9f5]">
+                                +91 97271 28593
                             </a>
                         </li>
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
-                            <a href="tel:+919876543210" className="hover:text-[#3fa9f5]">
-                                +91 98765 43210
+                            <a href="tel:+918160923809" className="hover:text-[#3fa9f5]">
+                                +91 81609 23809
+                            </a>
+                        </li>
+                        <li className="flex gap-4 items-center">
+                            <FaPhoneAlt className="text-[#ff931e]" />
+                            <a href="tel:+919537747139" className="hover:text-[#3fa9f5]">
+                                +91 95377 47139
+                            </a>
+                        </li>
+                        <li className="flex gap-4 items-center">
+                            <FaEnvelope className="text-[#3fa9f5]" />
+                            <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e]">
+                                info@rustechnet.com
                             </a>
                         </li>
                     </ul>
@@ -105,7 +117,7 @@ export default function Footer() {
                             label: "Instagram",
                             hoverColor: "hover:text-[#ff931e]"
                         }, {
-                            href: "https://linkedin.com/company/rustechnet",
+                            href: "https://www.linkedin.com/company/rus-technet-solutions-pvt-ltd/",
                             icon: <FaLinkedin />,
                             label: "LinkedIn",
                             hoverColor: "hover:text-[#3fa9f5]"
@@ -127,12 +139,12 @@ export default function Footer() {
                             </a>
                         ))}
                     </div>
-                    <p className="text-sm text-gray-500 mt-6">We’re always listening.</p>
+                    <p className="!text-sm text-gray-500 mt-6">We’re always listening.</p>
                 </div>
             </div>
 
             {/* Footer Bottom */}
-            <div className="mt-20 pt-8 border-t border-white/10 text-center text-sm text-gray-500">
+            <div className="mt-20 pt-8 border-t border-white/10 text-center !text-sm text-gray-500">
                 <p>© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
                 <p className="mt-1">
                     Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#3fa9f5] font-semibold">Devolve Studio</a>

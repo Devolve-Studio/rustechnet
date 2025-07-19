@@ -5,9 +5,9 @@ export default function MissionSection() {
     return(
         <section className="min-h-screen py-32 px-6 md:px-20 bg-[var(--background)] text-[var(--foreground)] relative overflow-hidden">
             {/* Decorative blobs */}
-            <div className="absolute -top-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
+            <div className="absolute -top-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0 animate-ping" />
             <div className="absolute -bottom-40 right-0 w-[300px] h-[300px] bg-[#ff931e]/20 blur-3xl rounded-full animate-pulse-slower z-0" />
-            <div className="absolute inset-0 bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] [background-size:30px_30px] opacity-5 z-0" />
+            <div className="absolute inset-0 dark:bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-5 z-0"/>
 
             <div className="max-w-6xl mx-auto relative z-10">
                 <motion.h2
@@ -24,10 +24,10 @@ export default function MissionSection() {
                         initial={{ opacity: 0, x: -60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-gradient-to-br from-[#3fa9f5]/10 to-[#3fa9f5]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
+                        className="bg-gradient-to-br from-[#3fa9f5]/10 to-[#3fa9f5]/5 border dark:border-white/10 border-gray-400 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
                     >
                         <h3 className="text-3xl font-extrabold text-[#3fa9f5] mb-4">Vision</h3>
-                        <p className="text-base leading-relaxed text-white/80">
+                        <p className="text-base leading-relaxed dark:text-white/80 text-gray-700">
                             To redefine security for renewable energy infrastructures by creating seamless, intelligent, and eco-aligned
                             surveillance solutions that inspire global trust.
                         </p>
@@ -37,10 +37,10 @@ export default function MissionSection() {
                         initial={{ opacity: 0, x: 60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-gradient-to-br from-[#ff931e]/10 to-[#ff931e]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
+                        className="bg-gradient-to-br from-[#ff931e]/10 to-[#ff931e]/5 border dark:border-white/10 border-gray-400 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
                     >
                         <h3 className="text-3xl font-extrabold text-[#ff931e] mb-4">Mission</h3>
-                        <p className="text-base leading-relaxed text-white/80">
+                        <p className="text-base leading-relaxed dark:text-white/80 text-gray-700">
                             To continuously evolve tech-based protection systems tailored for solar farms, wind turbines, and future-ready
                             facilities with seamless integration and real-time response.
                         </p>
@@ -51,10 +51,10 @@ export default function MissionSection() {
                         initial={{ opacity: 0, x: 60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-gradient-to-br from-[#ff931e]/10 to-[#ff931e]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
+                        className="bg-gradient-to-br from-[#ff931e]/10 to-[#ff931e]/5 border dark:border-white/10 border-gray-400 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
                     >
                         <h3 className="text-3xl font-extrabold text-[#ff931e] mb-4">Foundation</h3>
-                        <p className="text-base leading-relaxed text-white/80">
+                        <p className="text-base leading-relaxed dark:text-white/80 text-gray-700">
                             Our foundation is built on unwavering trust, a commitment to innovation, and a purpose to create safer,
                             smarter spaces for every generation.
                         </p>
@@ -64,10 +64,10 @@ export default function MissionSection() {
                         initial={{ opacity: 0, x: -60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-gradient-to-br from-[#3fa9f5]/10 to-[#3fa9f5]/5 border border-white/10 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
+                        className="bg-gradient-to-br from-[#3fa9f5]/10 to-[#3fa9f5]/5 border dark:border-white/10 border-gray-400 backdrop-blur-md p-10 rounded-3xl shadow-2xl hover:scale-[1.02] transition-all"
                     >
                         <h3 className="text-3xl font-extrabold text-[#3fa9f5] mb-4">Core Values</h3>
-                        <p className="text-base leading-relaxed text-white/80">
+                        <p className="text-base leading-relaxed dark:text-white/80 text-gray-700">
                             We value integrity in every action, precision in every install, and growth through responsibility
                             — shaping a future where technology empowers peace of mind
                         </p>

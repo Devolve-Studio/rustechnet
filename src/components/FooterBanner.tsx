@@ -18,7 +18,7 @@ export default function FooterBanner({
                                      }: FooterBannerProps) {
     return (
         <section className="py-32 px-6 md:px-20 text-center
-            bg-gradient-to-br from-[#ff931e] to-[#3fa9f5] text-black
+            bg-gradient-to-br from-[#ff931e] to-[#3fa9f5] via-white text-black
             dark:bg-gradient-to-tr dark:from-[#3fa9f5] dark:via-[#1c1c1c] dark:to-[#ff931e] dark:text-white
             transition-colors duration-500">
 

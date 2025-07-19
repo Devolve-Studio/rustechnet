@@ -84,7 +84,7 @@ export default function MapContent({ activeStates, projects }: ProjectMapProps) 
             {/* Decorative Blobs */}
             <div className="absolute -bottom-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
             <div className="absolute -top-40 right-0 w-[300px] h-[300px] bg-[#ff931e]/20 blur-3xl rounded-full animate-pulse-slower z-0" />
-            <div className="absolute inset-0 bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] [background-size:30px_30px] opacity-5 z-0" />
+            <div className="absolute inset-0 dark:bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />
 
             {/* Map Section */}
             <div

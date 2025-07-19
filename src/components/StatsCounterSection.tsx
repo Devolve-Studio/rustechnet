@@ -10,18 +10,18 @@ export default function StatsCounterSection() {
     const stats = [
         {
             title: 'Projects',
-            end: 120,
+            end: 400,
             gifLight: '/gifs/project-dark.gif',
             gifDark: '/gifs/project-light.gif',
         },
         {
-            title: 'Solar Plants',
-            end: 45,
+            title: 'Solar Farms',
+            end: 25,
             gifLight: '/gifs/solar-dark.gif',
             gifDark: '/gifs/solar-light.gif',
         },
         {
-            title: 'Wind Plants',
+            title: 'Wind Farms',
             end: 38,
             gifLight: '/gifs/wind-dark.gif',
             gifDark: '/gifs/wind-light.gif',
@@ -79,7 +79,7 @@ export default function StatsCounterSection() {
                         <h3 className="text-4xl font-bold mt-3">
                             {inView && <CountUp end={stat.end} duration={2} />}+
                         </h3>
-                        <p className="mt-1 text-sm text-gray-400 uppercase tracking-wide">{stat.title}</p>
+                        <p className="mt-1 !text-sm text-gray-400 uppercase tracking-wide">{stat.title}</p>
                     </motion.div>
                 ))}
             </motion.div>
