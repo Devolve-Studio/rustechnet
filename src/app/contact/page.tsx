@@ -63,7 +63,7 @@ export default function ContactPage() {
                         <li className="flex items-start gap-4">
                             <FaEnvelope className="text-[#3fa9f5] text-xl mt-1" />
                             <span>
-                                <a href="mailto:himanshu.t@rustechnet.com" className="hover:underline">himanshu.t@rustechnet.com</a>
+                                <a href="mailto:himanshu.t@rustechnet.com" className="hover:underline">himanshu.t@rustechnet.com</a><br />
                                 <a href="mailto:mayur.t@rustechnet.com" className="hover:underline">mayur.t@rustechnet.com</a><br />
                                 <a href="mailto:himanshu.p@rustechnet.com" className="hover:underline">himanshu.p@rustechnet.com</a>
                             </span>

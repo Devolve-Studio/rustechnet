@@ -11,12 +11,12 @@ export default function ServicesSection() {
         {
             title: "Wind Turbine Monitoring",
             desc: "High-altitude & vibration-resistant camera solutions.",
-            icon: "/icons/wind.svg",
+            icon: "/slides/WindFarm.jpg",
         },
         {
-            title: "Smart Intrusion Detection",
-            desc: "AI-based motion tracking to spot threats in real time.",
-            icon: "/icons/intrusion.svg",
+            title: "Smart Fire Detection",
+            desc: "AI-based heat tracking to spot threats in real time.",
+            icon: "/slides/FireAlarm.jpg",
         },
     ];
 
@@ -42,7 +42,7 @@ export default function ServicesSection() {
                         whileHover={{ scale: 1.03 }}
                         className="group relative h-[340px] bg-[#ededed] dark:bg-[#111111] overflow-hidden rounded-xl shadow-xl transition-all duration-300"
                     >
-                        <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                        <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-100 transition-opacity duration-1000">
                             <Image
                                 src={item.icon}
                                 alt={item.title}

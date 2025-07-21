@@ -20,7 +20,7 @@ export default function DirectorsMessage() {
             />
 
             {/* Messages container */}
-            <div className="z-10 grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-7xl w-full">
+            <div className="z-10 grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 max-w-7xl w-full">
                 {/* Director 1 */}
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}

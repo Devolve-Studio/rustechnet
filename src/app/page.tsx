@@ -40,17 +40,17 @@ export default function Home() {
                     {[
                         {
                             title: "Assessment",
-                            image: "/images/process/1.png",
+                            image: "/Assessment.jpg",
                             desc: "We analyze site layout, environmental conditions, and energy goals."
                         },
                         {
                             title: "Deployment",
-                            image: "/images/process/2.png",
+                            image: "/Deployment.jpg",
                             desc: "Installation of solar-compatible cameras, motion AI nodes, and secure servers."
                         },
                         {
                             title: "Monitoring",
-                            image: "/images/process/3.png",
+                            image: "/Monitoring.jpg",
                             desc: "Live alerts, intelligent tracking, and long-term reporting dashboards."
                         }
                     ].map((step, idx) => (

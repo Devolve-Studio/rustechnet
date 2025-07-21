@@ -15,7 +15,7 @@ export default function ServicesPage() {
             {/* Hero Banner */}
             <HeroBanner
                 // @ts-ignore
-                heading={["Empowering Green Farms with Advanced AI Surveillance"]}
+                heading={["Empowering Green Energy With AI Surveillance"]}
                 subheading={[
                     // @ts-ignore
                     "Advanced surveillance and safety systems built for modern energy infrastructure.",
