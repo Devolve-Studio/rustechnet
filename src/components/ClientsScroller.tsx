@@ -43,7 +43,7 @@ export default function ClientsSliderInfinite() {
                                     alt={`Client ${idx + 1}`}
                                     draggable={false}
                                     unselectable="on"
-                                    className="h-30 w-auto opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 pointer-events-none"
+                                    className="h-30 w-auto opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 pointer-events-none select-none"
                                 />
                             </picture>
                         </SwiperSlide>
