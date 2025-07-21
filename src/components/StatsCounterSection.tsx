@@ -79,7 +79,7 @@ export default function StatsCounterSection() {
                         <h3 className="text-4xl font-bold mt-3">
                             {inView && <CountUp end={stat.end} duration={2} />}+
                         </h3>
-                        <p className="mt-1 !text-sm text-gray-400 uppercase tracking-wide">{stat.title}</p>
+                        <p className="mt-1 !text-sm text-gray-400 uppercase tracking-wide whitespace-nowrap">{stat.title}</p>
                     </motion.div>
                 ))}
             </motion.div>
