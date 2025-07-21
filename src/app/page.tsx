@@ -40,17 +40,17 @@ export default function Home() {
                     {[
                         {
                             title: "Assessment",
-                            image: "/Assessment.jpg",
+                            image: "/Assessment.png",
                             desc: "We analyze site layout, environmental conditions, and energy goals."
                         },
                         {
                             title: "Deployment",
-                            image: "/Deployment.jpg",
+                            image: "/Deployment.png",
                             desc: "Installation of solar-compatible cameras, motion AI nodes, and secure servers."
                         },
                         {
                             title: "Monitoring",
-                            image: "/Monitoring.jpg",
+                            image: "/Monitoring.png",
                             desc: "Live alerts, intelligent tracking, and long-term reporting dashboards."
                         }
                     ].map((step, idx) => (
@@ -59,7 +59,7 @@ export default function Home() {
                             whileHover={{ scale: 1.03 }}
                             className="rounded-xl p-6 shadow-md bg-[#ededed] dark:bg-[#0f0f0f] text-center"
                         >
-                            <Image src={step.image} alt={step.title} width={100} height={100} className="mx-auto mb-4" />
+                            <Image src={step.image} alt={step.title} width={300} height={300} draggable={false} contextMenu={"none"} className="cursor-ponter pointer-events-none mx-auto mb-4 bg-none" />
                             <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                             <p className="text-sm opacity-70">{step.desc}</p>
                         </motion.div>

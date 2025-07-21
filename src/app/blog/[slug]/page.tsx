@@ -58,7 +58,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
             </p>
 
             {/* Blog content */}
-            <article className="prose prose-invert max-w-none whitespace-pre-wrap text-lg opacity-90">
+            <article className="prose prose-invert max-w-none whitespace-pre-wrap text-lg opacity-90 text-justify">
                 {blog.content}
             </article>
             <p className="!text-sm text-gray-500 dark:text-gray-400 mt-10 font-semibold">

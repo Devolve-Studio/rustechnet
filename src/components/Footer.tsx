@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#3fa9f5]/10 blur-3xl rounded-full" />
             <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-[#ff931e]/10 blur-3xl rounded-full" />
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+            <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-20 relative z-10">
                 {/* Brand / About */}
                 <div className="footer-section">
                     <h2 className="text-5xl font-black text-[#3fa9f5] mb-6">
@@ -66,6 +66,9 @@ export default function Footer() {
                             <li key={label} className="hover:translate-x-2 transition-transform">
                                 <Link href={href} className="hover:text-[#3fa9f5]">
                                     {label}
+                                    <span className="absolute right-20 w-0 h-full bg-[#3fa9f5]/10">
+                                    ➜
+                                    </span>
                                 </Link>
                             </li>
                         ))}
@@ -78,7 +81,8 @@ export default function Footer() {
                     <ul className="space-y-4 text-md text-gray-300">
                         <li className="flex gap-4 items-start">
                             <FaMapMarkerAlt className="text-[#3fa9f5] mt-1" />
-                            <span>Vadodara, Gujarat, India – 390001</span>
+                            <span>SF-21, DARSHANAM TRADE CENTRE-3,<br />
+                                NR. SURYA PALACE HOTEL,<br />SAYAJIGUNJ, VADODARA, GUJARAT -390020.</span>
                         </li>
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
