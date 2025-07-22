@@ -10,8 +10,10 @@ import Timeline from "@/components/Timeline";
 import MissionSection from "@/components/MissionSection";
 import MapContent from "@/components/MapContent";
 import DirectorsMessage from "@/components/DirectorsMessage";
+import ProjectsScroller from "@/components/ProjectsScroller";
 
 export default function AboutUs() {
+
     return (
         <main className="bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
             {/* Hero Section */}
@@ -160,44 +162,52 @@ export default function AboutUs() {
 
             <MissionSection />
 
-            <MapContent
+            <section className="relative bg-[var(--background)] text-[var(--foreground)] flex md:flex-row flex-col items-center justify-center">
+                {/* Decorative Blobs */}
+                <div className="absolute -bottom-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
+                <div className="absolute -top-40 right-0 w-[300px] h-[300px] bg-[#ff931e]/20 blur-3xl rounded-full animate-pulse-slower z-0" />
+                <div className="absolute inset-0 dark:bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />
+
+                <MapContent
                 activeStates={["Gujarat", "Maharashtra", "Karnataka", "Tamil Nadu"]}
-                projects={[
-                    {
-                        state: "Gujarat",
-                        companies: [
-                            "Powerica Limited",
-                            "KPI Green Energy Pvt. Ltd.",
-                            "Opera Energy Pvt. Ltd.",
-                            "Onix Renewable Limited",
-                            "GP Wind Pvt. Ltd.",
-                            "Sundrops Energia Pvt. Ltd.",
-                        ],
-                    },
-                    {
-                        state: "Maharashtra",
-                        companies: [
-                            "Fourth Partner Energy Pvt. Ltd.",
-                            "Serentica Renewables India Pvt. Ltd.",
-                        ],
-                    },
-                    {
-                        state: "Karnataka",
-                        companies: [
-                            "JSW Renewable Energy Pvt. Ltd.",
-                            "Fourth Partner Energy Pvt. Ltd.",
-                            "Solaris Electrical Services Pvt. Ltd.",
-                        ],
-                    },
-                    {
-                        state: "Tamil Nadu",
-                        companies: [
-                            "Watsun Infrabuild Pvt. Ltd.",
-                            "AMPLUS Iru Pvt. Ltd.",
-                        ],
-                    },
-                ]}
             />
+                <ProjectsScroller
+                    projects={[
+                        {
+                            state: "Gujarat",
+                            companies: [
+                                "Powerica Limited",
+                                "KPI Green Energy Pvt. Ltd.",
+                                "Opera Energy Pvt. Ltd.",
+                                "Onix Renewable Limited",
+                                "GP Wind Pvt. Ltd.",
+                                "Sundrops Energia Pvt. Ltd.",
+                            ],
+                        },
+                        {
+                            state: "Maharashtra",
+                            companies: [
+                                "Fourth Partner Energy Pvt. Ltd.",
+                                "Serentica Renewables India Pvt. Ltd.",
+                            ],
+                        },
+                        {
+                            state: "Karnataka",
+                            companies: [
+                                "JSW Renewable Energy Pvt. Ltd.",
+                                "Fourth Partner Energy Pvt. Ltd.",
+                                "Solaris Electrical Services Pvt. Ltd.",
+                            ],
+                        },
+                        {
+                            state: "Tamil Nadu",
+                            companies: [
+                                "Watsun Infrabuild Pvt. Ltd.",
+                                "AMPLUS Iru Pvt. Ltd.",
+                            ],
+                        },
+                    ]} />
+            </section>
 
             <section className="min-h-[50vh] bg-gradient-to-br from-[#1c1c1c] to-[#0a0a0a] text-white flex flex-col items-center justify-center px-6 md:px-20 relative overflow-hidden">
                 <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle,_#ff931e_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0 animate-[pulse_10s_infinite]" />

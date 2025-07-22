@@ -34,7 +34,7 @@ export default function Footer() {
     return (
         <footer
             ref={footerRef}
-            className="relative w-full bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] !text-sm text-white pt-28 pb-20 px-6 md:px-32 overflow-hidden"
+            className="relative w-full bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] !text-sm text-white pt-28 pb-10 px-6 md:px-32 overflow-hidden"
         >
             {/* Decorative SVGs */}
             <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#3fa9f5]/10 blur-3xl rounded-full" />
@@ -148,9 +148,9 @@ export default function Footer() {
             </div>
 
             {/* Footer Bottom */}
-            <div className="mt-20 pt-8 border-t border-white/10 text-center !text-sm text-gray-500">
-                <p>© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
-                <p className="mt-1">
+            <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
+                <p className="!text-sm">© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
+                <p className="mt-1 !text-sm">
                     Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#3fa9f5] font-semibold">Devolve Studio</a>
                 </p>
             </div>
