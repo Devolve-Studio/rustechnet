@@ -27,23 +27,16 @@ export default function ClientsSliderInfinite() {
                 allowTouchMove={true}
             >
                 {[...logos, ...logos].map((logo, idx) => {
-                    const darkLogo = logo.replace(".png", "_dark.png");
-
                     return (
                         <SwiperSlide key={idx}>
                             <picture>
-                                {/* Light theme version (default) */}
-                                <source
-                                    srcSet={`/clients/${darkLogo}`}
-                                    media="(prefers-color-scheme: light)"
-                                />
                                 {/* Dark theme version (fallback) */}
                                 <img
                                     src={`/clients/${logo}`}
                                     alt={`Client ${idx + 1}`}
                                     draggable={false}
                                     unselectable="on"
-                                    className="h-30 w-auto opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300 pointer-events-none select-none"
+                                    className="h-30 w-auto opacity-80 filter brightness-110 hover:opacity-100 hover:grayscale-0 transition duration-300 pointer-events-none select-none"
                                 />
                             </picture>
                         </SwiperSlide>
