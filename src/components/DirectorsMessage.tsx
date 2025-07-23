@@ -6,7 +6,6 @@ export default function DirectorsMessage() {
     return (
         <section className="relative max-h-screen md:max-h-[70vh] scroll-mt-20 w-full bg-black text-white overflow-hidden px-6 md:px-20 py-32 flex items-center justify-center">
             {/* Background overlays & starfield */}
-            <div className="absolute inset-0 bg-[url('/images/director-bg.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-[var(--background)] backdrop-blur-md z-0" />
             <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" /> {/*dark:bg-[radial-gradient(#00a86b_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5*/}
             <div className="absolute bottom-[-150px] left-[-150px] w-[400px] h-[400px] bg-[#00a86b]/20 blur-3xl rounded-full z-0 animate-ping" />

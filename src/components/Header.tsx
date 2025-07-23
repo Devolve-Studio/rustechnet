@@ -98,15 +98,17 @@ export default function Header() {
                 >
                     <motion.div
                         ref={logoRef}
-                        className="logo"
-                        whileHover={{
-                            scale: 1.1,
-                            rotate: 3
-                        }}
+                        className="inline-block text-left"
+                        whileHover={{ scale: 1.1, rotate: 2 }}
                         transition={{ type: "spring", stiffness: 300 }}
                     >
-                        <Link href="/" className="flex items-center space-x-3">
-                            <Image src="/logo.png" alt="PKEL Logo" width={120} height={100} className="h-10 w-45"/>
+                        <Link href="/" className="block">
+                            <h1 className="text-[42px] sm:text-[42px] font-extrabold text-[#00A650] lowercase leading-none tracking-wider select-none pointer-events-none cursor-default">
+                                rustechnet
+                            </h1>
+                            <p className="text-[10px] sm:text-[10px] text-[#00A650] uppercase mt-1">
+                                Smart Surveillance For A Greener Future
+                            </p>
                         </Link>
                     </motion.div>
 

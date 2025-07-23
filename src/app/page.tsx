@@ -68,7 +68,7 @@ export default function Home() {
             </section>
 
             {/* Featured Clients Section with auto-scroll */}
-            <section className="py-24 px-6 md:px-20 bg-[var(--background)] text-[var(--foreground)]">
+            <section className="py-24 px-6 md:px-20 bg-[var(--background)] text-[var(--foreground)] select-none">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
                     <p className="opacity-70">We’ve helped power and protect facilities across India and beyond.</p>

@@ -99,7 +99,7 @@ export default function Footer() {
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
                             <a href="tel:+919537747139" className="hover:text-[#00a86b]">
-                                +91 95377 47139
+                                +91 95377 47130
                             </a>
                         </li>
                         <li className="flex gap-4 items-center">
@@ -129,7 +129,7 @@ export default function Footer() {
                             href: "mailto:info@rustechnet.com",
                             icon: <FaEnvelope />,
                             label: "Email",
-                            hoverColor: "hover:text-white hover:bg-white"
+                            hoverColor: "hover:text-[#ff931e]"
                         }].map(({ href, icon, label, hoverColor }) => (
                             <a
                                 key={label}

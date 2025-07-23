@@ -57,7 +57,7 @@ export default function ContactPage() {
                             <span>
                                 Office: <a href="tel:+919727128593" className="hover:underline">+91 97271 28593</a> (Himanshu Thakor)<br />
                                 Sales: <a href="tel:+918160923809" className="hover:underline">+91 81609 23809</a> (Mayur Thakor)<br />
-                                Service: <a href="tel:+919537747139" className="hover:underline">+91 95377 47139</a> (Himanshu Patel)
+                                Service: <a href="tel:+919537747139" className="hover:underline">+91 95377 47130</a> (Himanshu Patel)
                             </span>
                         </li>
                         <li className="flex items-start gap-4">

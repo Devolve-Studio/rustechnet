@@ -125,7 +125,7 @@ export default function HeroSection() {
             {/* Navigation Buttons */}
             <div className="absolute top-1/2 left-4 z-40 -translate-y-1/2">
                 <button
-                    className="w-12 h-12 bg-[var(--foreground)] text-[var(--background)] rounded-full flex items-center justify-center shadow-md hover:scale-105 transition"
+                    className="w-12 h-12 bg-[var(--background)] text-[var(--foreground)] rounded-full flex items-center justify-center shadow-md hover:scale-105 transition"
                     onClick={() => swiperRef.current?.slidePrev()}
                     aria-label="Previous Slide"
                 >
@@ -134,7 +134,7 @@ export default function HeroSection() {
             </div>
             <div className="absolute top-1/2 right-4 z-40 -translate-y-1/2">
                 <button
-                    className="w-12 h-12 bg-[var(--foreground)] text-[var(--background)] rounded-full flex items-center justify-center shadow-md hover:scale-105 transition"
+                    className="w-12 h-12 bg-[var(--background)] text-[var(--foreground)] rounded-full flex items-center justify-center shadow-md hover:scale-105 transition"
                     onClick={() => swiperRef.current?.slideNext()}
                     aria-label="Next Slide"
                 >
@@ -145,12 +145,12 @@ export default function HeroSection() {
             {/* Swiper Pagination Styling */}
             <style jsx>{`
                 .hero-slider :global(.swiper-pagination-bullet) {
-                    background-color: var(--foreground);
+                    background-color: var(--background);
                     opacity: 0.5;
                     transition: all 0.3s ease-in-out;
                 }
                 .hero-slider :global(.swiper-pagination-bullet-active) {
-                    background-color: var(--foreground);
+                    background-color: var(--background);
                     opacity: 1;
                     width: 14px;
                     height: 14px;

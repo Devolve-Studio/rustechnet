@@ -11,8 +11,8 @@ return(
             {[
                 {
                     quote: "Their system detected an attempted breach within 10 seconds. Absolutely game-changing.",
-                    name: "Mr. Hitesh Chawda",
-                    role: "-Opera Engineers Pvt. Ltd."
+                    name: "Mr. Hitesh Chavda",
+                    role: "-Opera Energy Pvt. Ltd."
                 },
                 {
                     quote: "Our wind farm is now fully protected and automated, no blind spots anymore.",
@@ -26,8 +26,8 @@ return(
                 },
                 {
                     quote: "Their system detected an attempted breach within 10 seconds. Absolutely game-changing.",
-                    name: "Mr. Hitesh Chawda",
-                    role: "-Opera Engineers Pvt. Ltd."
+                    name: "Mr. Hitesh Chavda",
+                    role: "-Opera Energy Pvt. Ltd."
                 },
                 {
                     quote: "Our wind farm is now fully protected and automated, no blind spots anymore.",
