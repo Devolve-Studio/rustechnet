@@ -126,7 +126,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "RUS Technet Solutions Pvt. Ltd.",
               url: "https://rustechnet.com",
-              logo: "https://rustechnet.com/logo.png",
+              logo: "https://rustechnet.com/logo.webp",
               "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "SF-21, DARSHANAM TRADE CENTRE-3,NR. SURYA PALACE HOTEL, SAYAJIGUNJ, VADODARA, GUJARAT",

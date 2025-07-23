@@ -9,21 +9,21 @@ const events = [
         date: "July 2024",
         location: "Ahmedabad, India",
         desc: "Our team unveiled the next-gen solar surveillance AI at one of India's leading green expos.",
-        image: "/events/greentech.jpg"
+        image: "/events/greentech.webp"
     },
     {
         title: "Wind & Wire Summit",
         date: "May 2024",
         location: "Bangalore, India",
         desc: "RTSPL showcased long-range turbine monitoring and hosted a security workshop.",
-        image: "/events/windwire.jpg"
+        image: "/events/windwire.webp"
     },
     {
         title: "SecureGrid 2023",
         date: "Nov 2023",
         location: "Vadodara HQ",
         desc: "A landmark event where we launched our hybrid grid-connected monitoring ecosystem.",
-        image: "/events/securegrid.jpg"
+        image: "/events/securegrid.webp"
     }
 ];
 

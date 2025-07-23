@@ -99,7 +99,7 @@ export default function AboutUs() {
                         {/*<div className="w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-xl" />*/}
                         <picture>
                             <img
-                                src="/gifs/Windmill.gif"
+                                src="/gifs/Windmill.webp"
                                 alt="Windmill GIF"
                                 className="w-64 h-64 object-contain scale-130 select-none"
                                 draggable="false"

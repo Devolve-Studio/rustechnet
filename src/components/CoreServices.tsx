@@ -6,17 +6,17 @@ export default function ServicesSection() {
         {
             title: "Solar Plant Surveillance",
             desc: "Thermal + AI Cameras for 24/7 remote security.",
-            icon: "/slides/SolarFarm.jpg",
+            icon: "/slides/SolarFarm.webp",
         },
         {
             title: "Wind Turbine Monitoring",
             desc: "High-altitude & vibration-resistant camera solutions.",
-            icon: "/slides/WindFarm.jpg",
+            icon: "/slides/WindFarm.webp",
         },
         {
             title: "Smart Fire Detection",
             desc: "AI-based heat tracking to spot threats in real time.",
-            icon: "/slides/FireAlarm.jpg",
+            icon: "/slides/FireAlarm.webp",
         },
     ];
 

@@ -22,22 +22,22 @@ const slides = [
         link: "/contact",
     },
     {
-        src: "/slides/LanNetwork.jpg",
+        src: "/slides/LanNetwork.webp",
         heading: "Lan Networking",
         link: "/contact",
     },
     {
-        src: "/slides/EPABX.jpg",
+        src: "/slides/EPABX.webp",
         heading: "EPABX Intercom System",
         link: "/contact",
     },
     //{
-    //    src: "/slides/PASystems.jpg",
+    //    src: "/slides/PASystems.webp",
     //    heading: "PA Systems",
     //    link: "/contact",
     //},
     {
-        src: "/slides/FireAlarm.jpg",
+        src: "/slides/FireAlarm.webp",
         heading: "Fire Alarm Systems",
         link: "/contact",
     },

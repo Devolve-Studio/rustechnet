@@ -8,10 +8,10 @@ import "swiper/css";
 SwiperCore.use([Autoplay]);
 
 const logos = [
-    "c1.png", "c2.png", "c3.png", "c4.png", "c5.png",
-    "c6.png", "c7.png", "c8.png", "c9.png", "c10.png",
-    "c11.png", "c12.png", "c13.png", "c14.png", "c15.png",
-    "c16.png", "c17.png",
+    "c1.webp", "c2.webp", "c3.webp", "c4.webp", "c5.webp",
+    "c6.webp", "c7.webp", "c8.webp", "c9.webp", "c10.webp",
+    "c11.webp", "c12.webp", "c13.webp", "c14.webp", "c15.webp",
+    "c16.webp", "c17.webp",
 ];
 
 export default function ClientsSliderInfinite() {
