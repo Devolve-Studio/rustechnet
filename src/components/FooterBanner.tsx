@@ -18,9 +18,9 @@ export default function FooterBanner({
                                      }: FooterBannerProps) {
     return (
         <section className="py-32 px-6 md:px-20 text-center
-            bg-gradient-to-br from-[#ff931e] to-[#3fa9f5] via-white text-black
-            dark:bg-gradient-to-tr dark:from-[#3fa9f5] dark:via-[#1c1c1c] dark:to-[#ff931e] dark:text-white
+            bg-gradient-to-br from-[#ff931e] to-[#00a86b] via-white text-black
             transition-colors duration-500">
+            {/*dark:bg-gradient-to-tr dark:from-[#00a86b] dark:via-[#1c1c1c] dark:to-[#ff931e] dark:text-white*/}
 
             <motion.h2
                 initial={{ opacity: 0, y: 30 }}

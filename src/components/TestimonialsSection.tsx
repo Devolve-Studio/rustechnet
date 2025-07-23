@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function TestimonialsSection() {
 return(
-    <section className="py-24 px-6 md:px-20 bg-[#f8f8f8] dark:bg-[#111111] text-[var(--foreground)]">
+    <section className="py-24 px-6 md:px-20 bg-[#f8f8f8] text-[var(--foreground)]">
         <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Voices from the Field</h2>
             <p className="opacity-70">Real feedback from clients securing solar and wind projects.</p>
@@ -43,7 +43,7 @@ return(
                 <motion.div
                     key={idx}
                     whileHover={{ scale: 1.02 }}
-                    className="p-6 bg-white dark:bg-[#1c1c1c] rounded-xl shadow-md"
+                    className="p-6 bg-white rounded-xl shadow-md"
                 >
                     <p className="!text-md italic mb-4">"{testimonial.quote}"</p>
                     <h4 className="font-bold">{testimonial.name}</h4>

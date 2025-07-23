@@ -41,7 +41,7 @@ export default function StatsCounterSection() {
     ];
 
     return (
-        <section className="dark:bg-[#0a0a0a] bg-[var(--background)] py-16 px-6 text-[var(--foreground)]">
+        <section className="bg-[var(--background)] py-16 px-6 text-[var(--foreground)]">
             <motion.div
                 ref={ref}
                 className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
@@ -59,7 +59,7 @@ export default function StatsCounterSection() {
                 {stats.map((stat, idx) => (
                     <motion.div
                         key={idx}
-                        className="dark:bg-[#111111] bg-[#ededed] rounded-2xl p-6 flex flex-col items-center justify-center shadow-xl hover:scale-105 transition-transform duration-300"
+                        className=" bg-[#ededed] rounded-2xl p-6 flex flex-col items-center justify-center shadow-xl hover:scale-105 transition-transform duration-300"
                         variants={{
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
@@ -68,7 +68,6 @@ export default function StatsCounterSection() {
                         whileTap={{ scale: 0.97 }}
                     >
                         <picture>
-                            <source srcSet={stat.gifDark} media="(prefers-color-scheme: dark)" />
                             <img
                                 src={stat.gifLight}
                                 alt={stat.title}

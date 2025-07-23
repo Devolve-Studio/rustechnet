@@ -30,7 +30,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.8 }}
                 className="z-10 text-center py-24 px-6 md:px-20"
             >
-                <h1 className="text-5xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-[#00a86b] to-[#ff931e] bg-clip-text text-transparent">
                     Get In Touch 🚀
                 </h1>
                 <p className="max-w-2xl mx-auto mt-6 text-lg opacity-80">
@@ -43,12 +43,12 @@ export default function ContactPage() {
                     initial={{ opacity: 0, x: -80 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="relative bg-gradient-to-br from-[#3fa9f5]/10 to-[#ff931e]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl"
+                    className="relative bg-gradient-to-br from-[#00a86b]/10 to-[#ff931e]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl"
                 >
                     <h2 className="text-3xl font-bold mb-6">📡 Contact Us</h2>
                     <ul className="space-y-6 text-base">
                         <li className="flex items-start gap-4">
-                            <FaMapMarkerAlt className="text-[#3fa9f5] text-xl mt-1" />
+                            <FaMapMarkerAlt className="text-[#00a86b] text-xl mt-1" />
                             <span>SF21 DARSHANAM TRADE CENTRE-3,<br />  NR SURYA PALACE HOTEL,
                                 <br />SAYAJIGUNJ, <br /> GUJARAT - 390020.</span>
                         </li>
@@ -61,7 +61,7 @@ export default function ContactPage() {
                             </span>
                         </li>
                         <li className="flex items-start gap-4">
-                            <FaEnvelope className="text-[#3fa9f5] text-xl mt-7" />
+                            <FaEnvelope className="text-[#00a86b] text-xl mt-7" />
                             <span>
                                 <a href="mailto:himanshu.t@rustechnet.com" className="hover:underline">himanshu.t@rustechnet.com</a><br />
                                 <a href="mailto:mayur.t@rustechnet.com" className="hover:underline">mayur.t@rustechnet.com</a><br />
@@ -76,11 +76,11 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     onSubmit={handleSubmit}
-                    className="relative bg-gradient-to-br from-[#ff931e]/10 to-[#3fa9f5]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6"
+                    className="relative bg-gradient-to-br from-[#ff931e]/10 to-[#00a86b]/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl space-y-6"
                 >
                     <div className="relative">
                         <label htmlFor="name" className="absolute left-10 top-[-10px] bg-[var(--background)] px-2 text-sm font-medium">Name</label>
-                        <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#3fa9f5]" />
+                        <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#00a86b]" />
                         <input
                             type="text"
                             id="name"
@@ -88,7 +88,7 @@ export default function ContactPage() {
                             value={form.name}
                             onChange={handleChange}
                             required
-                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] text-[#0a0a0a]"
+                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#00a86b] text-[#0a0a0a]"
                             placeholder="John Doe"
                         />
                     </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
 
                     <div className="relative">
                         <label htmlFor="message" className="absolute left-10 top-[-10px] bg-[var(--background)] px-2 text-sm font-medium">Message</label>
-                        <FaCommentDots className="absolute left-3 top-4 text-[#3fa9f5]" />
+                        <FaCommentDots className="absolute left-3 top-4 text-[#00a86b]" />
                         <textarea
                             id="message"
                             name="message"
@@ -118,14 +118,14 @@ export default function ContactPage() {
                             value={form.message}
                             onChange={handleChange}
                             required
-                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#3fa9f5] resize-none text-[#0a0a0a]"
+                            className="w-full pl-10 pr-4 py-3 rounded-md bg-gray-100/80 text-sm focus:outline-none focus:ring-2 focus:ring-[#00a86b] resize-none text-[#0a0a0a]"
                             placeholder="Broadcast your thoughts..."
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full py-3 rounded-md font-bold bg-[#3fa9f5]  hover:bg-[#ff931e] transition-all duration-300 shadow-xl text-[var(--background)]"
+                        className="w-full py-3 rounded-md font-bold bg-[#00a86b]  hover:bg-[#ff931e] transition-all duration-300 shadow-xl text-[var(--background)]"
                     >
                         Send A Message
                     </button>
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
             {/* Starfield effect */}
             <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-                <div className="w-full h-full bg-[radial-gradient(circle,_#3fa9f5_1px,_transparent_1px)] [background-size:20px_20px] opacity-5"></div>
+                <div className="w-full h-full bg-[radial-gradient(circle,_#00a86b_1px,_transparent_1px)] [background-size:20px_20px] opacity-5"></div>
             </div>
 
             {/* Map - stylized as a satellite window */}

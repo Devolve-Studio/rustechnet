@@ -77,7 +77,7 @@ export default function Header() {
     return (
         <>
             <motion.div
-                className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] z-[999]"
+                className="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#00a86b] to-[#ff931e] z-[999]"
                 style={{ width: scaleProgress }}
             />
 
@@ -87,9 +87,9 @@ export default function Header() {
                     opacity: opacityTransform,
                     transition: 'all 0.3s ease-in-out'
                 }}
-                className="fixed w-full top-0 z-[100] bg-gradient-to-r from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] backdrop-blur-xl text-white shadow-[0_0_40px_#00000099] border-b border-[#3fa9f5]/30 font-orbitron"
+                className="fixed w-full top-0 z-[100] bg-[#e5e5e5] backdrop-blur-xl text-[#444444]  border-b border-[#00a86b]/30 font-orbitron"
                 ref={scrollRef}
-            >
+            >{/*shadow-[0_0_40px_#00000099]*/}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -106,7 +106,7 @@ export default function Header() {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <Link href="/" className="flex items-center space-x-3">
-                            <Image src="/logo.png" alt="PKEL Logo" width={80} height={40} />
+                            <Image src="/logo.png" alt="PKEL Logo" width={120} height={100} className="h-10 w-45"/>
                         </Link>
                     </motion.div>
 
@@ -120,7 +120,7 @@ export default function Header() {
                             >
                                 <Link
                                     href={link.href}
-                                    className={`px-4 py-1 rounded-xl transition-all duration-300 ${pathname === link.href ? 'bg-[#ff931e] text-black shadow-md' : 'hover:text-[#3fa9f5]'}`}
+                                    className={`px-4 py-1 rounded-xl transition-all duration-300 ${pathname === link.href ? 'bg-[#ff931e] text-black shadow-md' : 'hover:text-[#00A86B]'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -148,13 +148,13 @@ export default function Header() {
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ x: '100%', opacity: 0 }}
                                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                                className="fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-[#111111] to-[#1c1c1c] backdrop-blur-md shadow-2xl z-50 flex flex-col border-l border-[#3fa9f5]/20 rounded-l-xl"
+                                className="fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-[#111111] to-[#1c1c1c] backdrop-blur-md shadow-2xl z-50 flex flex-col border-l border-[#00a86b]/20 rounded-l-xl"
                             >
                                 <motion.div
                                     initial={{ y: -20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 0.4 }}
-                                    className="flex items-center justify-between p-4 border-b border-[#3fa9f5]/20"
+                                    className="flex items-center justify-between p-4 border-b border-[#00A86B]/20"
                                 >
                                     <span className="text-lg font-semibold">Navigation</span>
                                     <button onClick={() => setIsOpen(false)} aria-label="Close Menu">

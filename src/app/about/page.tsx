@@ -28,7 +28,7 @@ export default function AboutUs() {
             {/* SVG Blobs Section */}
             <section className="relative w-full py-32 bg-[var(--background)] overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full">
-                    <svg className="absolute opacity-10 -top-20 -left-20 animate-pulse" width="600" height="600" fill="#3fa9f5" viewBox="0 0 600 600">
+                    <svg className="absolute opacity-10 -top-20 -left-20 animate-pulse" width="600" height="600" fill="#00a86b" viewBox="0 0 600 600">
                         <path d="M300,0C465,0,600,135,600,300C600,465,465,600,300,600C135,600,0,465,0,300C0,135,135,0,300,0Z" />
                     </svg>
                     <svg className="absolute opacity-10 -bottom-20 -right-20 animate-pulse delay-200" width="500" height="500" fill="#ff931e" viewBox="0 0 600 600">
@@ -76,9 +76,9 @@ export default function AboutUs() {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-[#ededed] dark:bg-[#1c1c1c] p-6 rounded-xl shadow-lg"
+                                className="bg-[#ededed] p-6 rounded-xl shadow-lg"
                             >
-                                <h3 className="text-xl font-semibold mb-2 text-[#3fa9f5]">{point.title}</h3>
+                                <h3 className="text-xl font-semibold mb-2 text-[#00a86b]">{point.title}</h3>
                                 <p className="!text-sm opacity-70">{point.description}</p>
                             </motion.div>
                         ))}
@@ -87,7 +87,7 @@ export default function AboutUs() {
             </section>
 
             {/* Visual Split Section */}
-            <section className="py-12 px-6 md:px-20 bg-[#f8f8f8] dark:bg-[#121212]">
+            <section className="py-12 px-6 md:px-20 bg-[#f8f8f8]">
                 <div
                     className="flex flex-col md:flex-row items-center gap-0 max-w-7xl mx-auto">
                     <motion.div
@@ -148,7 +148,7 @@ export default function AboutUs() {
                             className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg border border-white/10"
                         >
                             <h3 className="text-xl font-semibold mb-2 text-[#ff931e]">{item.title}</h3>
-                            <p className="text-sm dark:text-gray-300 text-gray-700">{item.desc}</p>
+                            <p className="text-sm text-gray-700">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -164,9 +164,9 @@ export default function AboutUs() {
 
             <section className="relative bg-[var(--background)] text-[var(--foreground)] flex md:flex-row flex-col items-center justify-center">
                 {/* Decorative Blobs */}
-                <div className="absolute -bottom-40 left-0 w-[300px] h-[300px] bg-[#3fa9f5]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
+                <div className="absolute -bottom-40 left-0 w-[300px] h-[300px] bg-[#00a86b]/20 blur-3xl rounded-full animate-pulse-slow z-0" />
                 <div className="absolute -top-40 right-0 w-[300px] h-[300px] bg-[#ff931e]/20 blur-3xl rounded-full animate-pulse-slower z-0" />
-                <div className="absolute inset-0 dark:bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />
+                <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />{/*dark:bg-[radial-gradient(#00a86b_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5*/}
 
                 <MapContent
                 activeStates={["Gujarat", "Maharashtra", "Karnataka", "Tamil Nadu"]}
@@ -223,7 +223,7 @@ export default function AboutUs() {
                     </p>
                     <Link
                         href="/contact"
-                        className="inline-block bg-[#ff931e] hover:bg-[#3fa9f5] text-black font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 text-lg"
+                        className="inline-block bg-[#ff931e] hover:bg-[#00a86b] text-black font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300 text-lg"
                     >
                         Let’s Talk
                     </Link>

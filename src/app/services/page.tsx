@@ -23,7 +23,7 @@ export default function ServicesPage() {
                     "Tailored for solar farms, wind projects, and industrial sites.",
                 ]} />
             {/* Services Grid */}
-            <section className="py-24 px-6 md:px-20 dark:bg-[#1c1c1c] bg-[#ffffff]">
+            <section className="py-24 px-6 md:px-20 bg-[#ffffff]">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -36,9 +36,9 @@ export default function ServicesPage() {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-[#ededed] dark:bg-[#111111] p-6 rounded-xl shadow-xl hover:shadow-[#3fa9f5]/30 transition"
+                                className="bg-[#ededed] p-6 rounded-xl shadow-xl hover:shadow-[#00a86b]/30 transition"
                             >
-                                <h3 className="text-xl font-semibold text-[#3fa9f5] mb-2">{title}</h3>
+                                <h3 className="text-xl font-semibold text-[#00a86b] mb-2">{title}</h3>
                                 <p className="text-sm opacity-70">Tailored, scalable, and energy-efficient security technology.</p>
                             </motion.div>
                         ))}
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                         ease: "linear",
                         repeat: Infinity,
                     }}
-                    className="absolute w-[300px] h-[300px] border border-dashed dark:border-[#ffffff22] border-gray-600 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+                    className="absolute w-[300px] h-[300px] border border-dashed border-gray-600 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
                 />
                 <svg className="absolute top-0 left-0 w-full h-64 opacity-10" viewBox="0 0 600 600" fill="#ff931e">
                     <path d="M300,0C465,0,600,135,600,300C600,465,465,600,300,600C135,600,0,465,0,300C0,135,135,0,300,0Z" />
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                     transition={{ duration: 0.6 }}
                     className="relative z-10 max-w-5xl mx-auto text-center"
                 >
-                    <h2 className="text-4xl font-bold text-[#3fa9f5] mb-6">Total Lifecycle Support</h2>
+                    <h2 className="text-4xl font-bold text-[#00a86b] mb-6">Total Lifecycle Support</h2>
                     <p className="text-lg opacity-80">From design to deployment to maintenance—we’re with you at every step.</p>
                 </motion.div>
             </section>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-[#2c2c2c] p-6 rounded-lg shadow-xl"
                             >
-                                <h3 className="text-xl font-semibold text-[#3fa9f5] mb-2">{title}</h3>
+                                <h3 className="text-xl font-semibold text-[#00a86b] mb-2">{title}</h3>
                                 <p className="text-sm opacity-80">We ensure a seamless workflow with real-time updates and minimal disruptions.</p>
                             </motion.div>
                         ))}
@@ -93,7 +93,7 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            <section className="py-24 px-6 md:px-20 bg-[#0f0f0f] text-white">
+            <section className="py-24 px-6 md:px-20 text-black">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -105,24 +105,24 @@ export default function ServicesPage() {
                         RUS Technet offers robust AMC plans for long-term system reliability, performance checks, and peace of mind.
                     </p>
                 </motion.div>
-                <div className="grid md:grid-cols-3 gap-10 mt-16">
+                <div className="grid md:grid-cols-3 gap-10 mt-16 ">
                     {["Quarterly health audits", "Remote firmware updates", "On-site emergency support"].map((item, idx) => (
                         <motion.div
                             key={idx}
                             whileHover={{ scale: 1.05 }}
-                            className="bg-white/10 backdrop-blur-lg border border-white/10 p-8 rounded-2xl shadow-lg text-center"
+                            className="bg-white/90 backdrop-blur-lg border border-white/10 p-8 rounded-2xl shadow-lg text-center"
                         >
-                            <h4 className="text-xl font-semibold text-white mb-3">{item}</h4>
-                            <p className="text-sm text-gray-300">Our engineers ensure your surveillance runs smooth, always.</p>
+                            <h4 className="text-xl font-semibold text-black mb-3">{item}</h4>
+                            <p className="text-sm text-black/80">Our engineers ensure your surveillance runs smooth, always.</p>
                         </motion.div>
                     ))}
                 </div>
             </section>
 
             {/* New Rich Section - Industry Focus */}
-            <section className="py-32 px-6 md:px-20 bg-[#ededed] dark:bg-[#121212] text-center">
-                <h2 className="text-4xl font-bold text-[#3fa9f5] mb-6">Industry-Centric Solutions</h2>
-                <p className="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300">
+            <section className="py-32 px-6 md:px-20 bg-[#ededed] text-center">
+                <h2 className="text-4xl font-bold text-[#00a86b] mb-6">Industry-Centric Solutions</h2>
+                <p className="max-w-3xl mx-auto text-lg text-gray-700">
                     We tailor systems for renewable energy farms, substations, and industrial facilities, ensuring security and operational resilience.
                 </p>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -9,14 +9,14 @@ export default function Timeline() {
                 transition={{ duration: 0.8 }}
                 className="text-center max-w-4xl mx-auto z-10 relative"
             >
-                <h2 className="text-5xl font-black mb-6 bg-gradient-to-r from-[#3fa9f5] to-[#ff931e] text-transparent bg-clip-text">
+                <h2 className="text-5xl font-black mb-6 bg-gradient-to-r from-[#00a86b] to-[#ff931e] text-transparent bg-clip-text">
                     Industry Recognition & Timeline
                 </h2>
                 <p className="text-xl opacity-70">
                     Each step we take is powered by precision, passion, and progress. Scroll to orbit our highlights.
                 </p>
                 <section className="relative min-h-screen py-32 px-6 md:px-20 text-white overflow-hidden">
-                    <div className="relative max-w-5xl mx-auto border-l-4 border-dashed border-[#3fa9f5]/30 pl-10">
+                    <div className="relative max-w-5xl mx-auto border-l-4 border-dashed border-[#00a86b]/30 pl-10">
                         {[{
                             year: "2016",
                             title: "Foundation Laid",
@@ -43,7 +43,7 @@ export default function Timeline() {
                             >
                                 <div className="absolute -left-[27px] top-1 w-5 h-5 bg-[#ff931e] border-[3px] border-white rounded-full z-10 transition group-hover:scale-125"></div>
                                 <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl p-6 shadow-xl">
-                                    <div className="text-[#3fa9f5] font-bold text-lg mb-2">{item.year}</div>
+                                    <div className="text-[#00a86b] font-bold text-lg mb-2">{item.year}</div>
                                     <h3 className="text-2xl font-semibold text-white mb-1">{item.title}</h3>
                                     <p className="text-gray-300 leading-relaxed text-sm">{item.desc}</p>
                                 </div>
@@ -55,7 +55,7 @@ export default function Timeline() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle,_#ff931e_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0 pointer-events-none animate-pulse-slow"></div>
                 </section>
             </motion.div>
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,_#3fa9f5_1px,_transparent_1px)] [background-size:40px_40px] opacity-5 z-0 animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle,_#00a86b_1px,_transparent_1px)] [background-size:40px_40px] opacity-5 z-0 animate-pulse"></div>
         </section>
     );
 }

@@ -29,7 +29,7 @@ export default function BlogDetailPage(){
         <main className="bg-[var(--background)] text-[var(--foreground)] px-6 md:px-32 py-24 max-w-6xl mx-auto">
             <Link
                 href="/blog#blogs"
-                className=" text-[#3fa9f5] hover:underline font-medium"
+                className=" text-[#00a86b] hover:underline font-medium"
             >
                 ← Back to Blogs
             </Link>
@@ -37,7 +37,7 @@ export default function BlogDetailPage(){
 
             {/* Author + Writer info */}
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-10">
-                By <span className="font-semibold text-[#3fa9f5]">{blog.author}</span>
+                By <span className="font-semibold text-[#00a86b]">{blog.author}</span>
             </p>
 
             {/* Blog content */}

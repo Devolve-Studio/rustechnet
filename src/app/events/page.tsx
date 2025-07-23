@@ -49,7 +49,7 @@ export default function EventsPage() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.1, duration: 0.6 }}
-                        className="bg-white dark:bg-[#111] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
+                        className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
                     >
                         <div className="relative w-full h-56">
                             <Image src={event.image} alt={event.title} fill className="object-cover" />

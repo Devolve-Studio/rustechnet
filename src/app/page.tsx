@@ -57,7 +57,7 @@ export default function Home() {
                         <motion.div
                             key={idx}
                             whileHover={{ scale: 1.03 }}
-                            className="rounded-xl p-6 shadow-md bg-[#ededed] dark:bg-[#0f0f0f] text-center"
+                            className="rounded-xl p-6 shadow-md bg-[#ededed] text-center"
                         >
                             <Image src={step.image} alt={step.title} width={300} height={300} draggable={false} contextMenu={"none"} className="cursor-ponter pointer-events-none mx-auto mb-4 bg-none select-none" />
                             <h3 className="text-lg font-semibold mb-2">{step.title}</h3>

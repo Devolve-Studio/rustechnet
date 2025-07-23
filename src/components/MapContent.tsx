@@ -92,8 +92,8 @@ export default function MapContent({ activeStates }: ProjectMapProps) {
                                     transform: "translate(-50%, -50%)",
                                 }}
                             >
-                                <div className="w-4 h-4 bg-[#3fa9f5] rounded-full animate-ping" />
-                                <div className="w-2 h-2 bg-[#3fa9f5] rounded-full absolute top-1 left-1" />
+                                <div className="w-4 h-4 bg-[#00a86b] rounded-full animate-ping" />
+                                <div className="w-2 h-2 bg-[#00a86b] rounded-full absolute top-1 left-1" />
                             </motion.div>
                         );
                     })}
@@ -111,7 +111,7 @@ export default function MapContent({ activeStates }: ProjectMapProps) {
                 className="w-full max-w-md bg-[var(--foreground)] text-[var(--background)] p-6 sm:p-8 rounded-2xl shadow-xl backdrop-blur-md border border-white/10"
             >
                 <h3 className="text-2xl font-bold mb-4">
-                    Our Footprints in <span className="text-[#3fa9f5]">{currentProject.state}</span>
+                    Our Footprints in <span className="text-[#00a86b]">{currentProject.state}</span>
                 </h3>
                 <ul className="space-y-2 text-sm list-disc list-inside">
                     {currentProject.companies.map((company, idx) => (

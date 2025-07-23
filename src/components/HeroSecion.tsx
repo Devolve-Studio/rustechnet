@@ -106,12 +106,12 @@ export default function HeroSection() {
 
                                 {/* Content */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-30">
-                                    <h2 className="text-white dark:text-[var(--foreground)] text-3xl md:text-5xl font-bold drop-shadow-md">
+                                    <h2 className="text-white text-3xl md:text-5xl font-bold drop-shadow-md">
                                         {slide.heading}
                                     </h2>
                                     <Link
                                         href={slide.link}
-                                        className="mt-6 inline-block bg-[#3fa9f5] text-black dark:text-white font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-[#3498db] transition"
+                                        className="mt-6 inline-block bg-[#00a86b] text-black dark:text-white font-semibold px-6 py-2 rounded-md shadow-lg hover:bg-[#3498db] transition"
                                     >
                                         Inquire Now!!
                                     </Link>

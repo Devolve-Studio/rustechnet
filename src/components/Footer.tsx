@@ -37,13 +37,13 @@ export default function Footer() {
             className="relative w-full bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] !text-sm text-white pt-28 pb-10 px-6 md:px-32 overflow-hidden"
         >
             {/* Decorative SVGs */}
-            <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#3fa9f5]/10 blur-3xl rounded-full" />
+            <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#00a86b]/10 blur-3xl rounded-full" />
             <div className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-[#ff931e]/10 blur-3xl rounded-full" />
 
             <div className="max-w-8xl mx-auto grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-20 relative z-10">
                 {/* Brand / About */}
                 <div className="footer-section">
-                    <h2 className="text-5xl font-black text-[#3fa9f5] mb-6">
+                    <h2 className="text-5xl font-black text-[#00a86b] mb-6">
                         RUS <span className="text-[#ff931e]">Technet</span>
                     </h2>
                     <p className="text-gray-400 leading-relaxed !text-lg">
@@ -64,9 +64,9 @@ export default function Footer() {
                             { label: "Contact", href: "/contact" },
                         ].map(({ label, href }) => (
                             <li key={label} className="hover:translate-x-2 transition-transform">
-                                <Link href={href} className="hover:text-[#3fa9f5]">
+                                <Link href={href} className="hover:text-[#00a86b]">
                                     {label}
-                                    <span className="absolute right-20 w-0 h-full bg-[#3fa9f5]/10">
+                                    <span className="absolute right-20 w-0 h-full bg-[#00a86b]/10">
                                     ➜
                                     </span>
                                 </Link>
@@ -80,30 +80,30 @@ export default function Footer() {
                     <h3 className="text-xl font-semibold mb-6 text-[#ff931e] uppercase tracking-wider">Contact</h3>
                     <ul className="space-y-4 text-md text-gray-300">
                         <li className="flex gap-4 items-start">
-                            <FaMapMarkerAlt className="text-[#3fa9f5] mt-1" />
+                            <FaMapMarkerAlt className="text-[#00a86b] mt-1" />
                             <span>SF-21, DARSHANAM TRADE CENTRE-3,<br />
                                 NR. SURYA PALACE HOTEL,<br />SAYAJIGUNJ, VADODARA, GUJARAT -390020.</span>
                         </li>
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
-                            <a href="tel:+919727128593" className="hover:text-[#3fa9f5]">
+                            <a href="tel:+919727128593" className="hover:text-[#00a86b]">
                                 +91 97271 28593
                             </a>
                         </li>
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
-                            <a href="tel:+918160923809" className="hover:text-[#3fa9f5]">
+                            <a href="tel:+918160923809" className="hover:text-[#00a86b]">
                                 +91 81609 23809
                             </a>
                         </li>
                         <li className="flex gap-4 items-center">
                             <FaPhoneAlt className="text-[#ff931e]" />
-                            <a href="tel:+919537747139" className="hover:text-[#3fa9f5]">
+                            <a href="tel:+919537747139" className="hover:text-[#00a86b]">
                                 +91 95377 47139
                             </a>
                         </li>
                         <li className="flex gap-4 items-center">
-                            <FaEnvelope className="text-[#3fa9f5]" />
+                            <FaEnvelope className="text-[#00a86b]" />
                             <a href="mailto:info@rustechnet.com" className="hover:text-[#ff931e]">
                                 info@rustechnet.com
                             </a>
@@ -124,7 +124,7 @@ export default function Footer() {
                             href: "https://www.linkedin.com/company/rus-technet-solutions-pvt-ltd/",
                             icon: <FaLinkedin />,
                             label: "LinkedIn",
-                            hoverColor: "hover:text-[#3fa9f5]"
+                            hoverColor: "hover:text-[#00a86b]"
                         }, {
                             href: "mailto:info@rustechnet.com",
                             icon: <FaEnvelope />,
@@ -151,7 +151,7 @@ export default function Footer() {
             <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
                 <p className="!text-sm">© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
                 <p className="mt-1 !text-sm">
-                    Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#3fa9f5] font-semibold">Devolve Studio</a>
+                    Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#00a86b] font-semibold">Devolve Studio</a>
                 </p>
             </div>
         </footer>

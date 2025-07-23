@@ -20,7 +20,7 @@ export default function BlogPage() {
             {/* Featured Articles */}
             <section className="py-24 px-6 md:px-20" id="blogs">
                 <div className="max-w-8xl mx-auto">
-                    <h2 className="text-4xl font-bold text-center mb-12 text-[#3fa9f5]">Latest Posts</h2>
+                    <h2 className="text-4xl font-bold text-center mb-12 text-[#00a86b]">Latest Posts</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                         {[
                             {
@@ -63,13 +63,13 @@ export default function BlogPage() {
                             <motion.div
                                 key={i}
                                 whileHover={{ scale: 1.03 }}
-                                className="bg-[#ededed] dark:bg-[#1c1c1c] p-6 rounded-xl shadow-md flex flex-col"
+                                className="bg-[#ededed] p-6 rounded-xl shadow-md flex flex-col"
                             >
                                 <h3 className="text-xl font-semibold text-[#ff931e] mb-2">{title}</h3>
                                 <p className="text-sm opacity-70 flex-grow">{excerpt}</p>
                                 <Link
                                     href={link}
-                                    className="mt-4 text-[#3fa9f5] hover:underline font-medium"
+                                    className="mt-4 text-[#00a86b] hover:underline font-medium"
                                 >
                                     Read More →
                                 </Link>
@@ -81,7 +81,7 @@ export default function BlogPage() {
             </section>
 
             {/* Subscribe CTA */}
-            <section className="py-24 bg-gradient-to-tr dark:from-[#1c1c1c] from-white to-[#3fa9f5] text-[var(--foreground)] text-center">
+            <section className="py-24 bg-gradient-to-tr from-white to-[#00a86b] text-[var(--foreground)] text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

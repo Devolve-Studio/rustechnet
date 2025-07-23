@@ -7,9 +7,9 @@ export default function DirectorsMessage() {
         <section className="relative max-h-screen md:max-h-[70vh] scroll-mt-20 w-full bg-black text-white overflow-hidden px-6 md:px-20 py-32 flex items-center justify-center">
             {/* Background overlays & starfield */}
             <div className="absolute inset-0 bg-[url('/images/director-bg.jpg')] bg-cover bg-center" />
-            <div className="absolute inset-0 dark:bg-black/70 bg-[var(--background)] backdrop-blur-md z-0" />
-            <div className="absolute inset-0 dark:bg-[radial-gradient(#3fa9f5_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />
-            <div className="absolute bottom-[-150px] left-[-150px] w-[400px] h-[400px] bg-[#3fa9f5]/20 blur-3xl rounded-full z-0 animate-ping" />
+            <div className="absolute inset-0 bg-[var(--background)] backdrop-blur-md z-0" />
+            <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" /> {/*dark:bg-[radial-gradient(#00a86b_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5*/}
+            <div className="absolute bottom-[-150px] left-[-150px] w-[400px] h-[400px] bg-[#00a86b]/20 blur-3xl rounded-full z-0 animate-ping" />
             <div className="absolute top-[-150px] right-[-150px] w-[400px] h-[400px] bg-[#ff931e]/20 blur-3xl rounded-full z-0 animate-ping" />
 
             {/* Floating orbit animation */}
@@ -37,7 +37,7 @@ export default function DirectorsMessage() {
           with the rhythm of the wind, and shine with the sun."
         </span>
                         <br />
-                        <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Thakor</span>
+                        <span className="text-[#00a86b] font-bold block mt-4">– Himanshu Thakor</span>
                     </p>
                 </motion.div>
 
@@ -57,7 +57,7 @@ export default function DirectorsMessage() {
           uninterrupted clarity."
         </span>
                         <br />
-                        <span className="text-[#3fa9f5] font-bold block mt-4">– Mayur Thakor</span>
+                        <span className="text-[#00a86b] font-bold block mt-4">– Mayur Thakor</span>
                     </p>
                 </motion.div>
 
@@ -77,7 +77,7 @@ export default function DirectorsMessage() {
           aim to earn with every installation."
         </span>
                         <br />
-                        <span className="text-[#3fa9f5] font-bold block mt-4">– Himanshu Patel</span>
+                        <span className="text-[#00a86b] font-bold block mt-4">– Himanshu Patel</span>
                     </p>
                 </motion.div>
             </div>
