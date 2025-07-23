@@ -1,16 +1,26 @@
 "use client";
-import { useState } from "react";
-import Preloader from "./Preloader";
+import { useState, useEffect } from "react";
+import Preloader from "@/components/Preloader"
 
-export default function ClientWrapper({ children }: { children: React.ReactNode }) {
+export default function PreloaderWrapper({ children }: { children: React.ReactNode }) {
     const [done, setDone] = useState(false);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDone(true);
+        }, 1800); // or call setDone from Preloader internally
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <>
-            {!done && <Preloader onFinish={() => setDone(true)} />}
-            <div className={`${done ? "block" : "hidden"}`}>
-                {children}
-            </div>
-        </>
+        <div className="relative">
+            {children}
+            {!done && (
+                <div className="fixed inset-0 z-50 bg-[var(--background)] flex items-center justify-center transition-opacity duration-700">
+                    <Preloader />
+                </div>
+            )}
+        </div>
     );
 }

@@ -2,29 +2,34 @@
 import { useEffect, useState } from "react";
 import LogoTyping from "./LogoTyping";
 
-export default function Preloader({ onFinish }: { onFinish: () => void }) {
+export default function Preloader() {
     const [fadeOut, setFadeOut] = useState(false);
     const [hidden, setHidden] = useState(false);
 
     useEffect(() => {
-        const animationDuration = 1000; // matches transition-duration
+        const totalDuration = 1500; // 1s wait + 0.5s fade
 
-        const timeout = setTimeout(() => {
-            setFadeOut(true); // start fade
-            setTimeout(() => {
-                setHidden(true); // remove from DOM
-                onFinish(); // notify parent
-            }, animationDuration);
-        }, 2500);
+        const fadeTimer = setTimeout(() => {
+            setFadeOut(true);
+        }, 1000);
 
-        return () => clearTimeout(timeout);
+        const hideTimer = setTimeout(() => {
+            setHidden(true);
+        }, totalDuration);
+
+        return () => {
+            clearTimeout(fadeTimer);
+            clearTimeout(hideTimer);
+        };
     }, []);
 
     if (hidden) return null;
 
     return (
         <div
-            className={`fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-1000 ${
+            role="presentation"
+            aria-hidden="true"
+            className={`fixed inset-0 z-50 flex items-center justify-center bg-[var(--background)] text-[var(--foreground)] transition-opacity duration-500 ${
                 fadeOut ? "opacity-0" : "opacity-100"
             }`}
         >

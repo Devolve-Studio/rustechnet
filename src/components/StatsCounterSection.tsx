@@ -12,31 +12,26 @@ export default function StatsCounterSection() {
             title: 'Projects',
             end: 400,
             gifLight: '/gifs/project-dark.gif',
-            gifDark: '/gifs/project-light.gif',
         },
         {
             title: 'Solar Farms',
             end: 25,
             gifLight: '/gifs/solar-dark.gif',
-            gifDark: '/gifs/solar-light.gif',
         },
         {
             title: 'Wind Farms',
             end: 38,
             gifLight: '/gifs/wind-dark.gif',
-            gifDark: '/gifs/wind-light.gif',
         },
         {
             title: 'Customers',
             end: 200,
             gifLight: '/gifs/customer-dark.gif',
-            gifDark: '/gifs/customer-light.gif',
         },
         {
             title: 'Upcoming Projects',
             end: 12,
             gifLight: '/gifs/upcoming-dark.gif',
-            gifDark: '/gifs/upcoming-light.gif',
         },
     ];
 
