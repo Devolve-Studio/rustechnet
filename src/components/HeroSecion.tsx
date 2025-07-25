@@ -52,49 +52,34 @@ export default function HeroSection() {
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 spaceBetween={30}
                 slidesPerView={1}
-                centeredSlides={true}
-                centeredSlidesBounds={true}
+                centeredSlides
+                centeredSlidesBounds
                 autoplay={{ delay: 4000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
-                navigation={false}
                 modules={[Autoplay, Pagination]}
                 className="w-full h-full"
             >
                 {slides.map((slide, index) => {
                     const isVideo = /\.(mp4|webm|ogg)$/i.test(slide.src);
-                    const thumbnail = slide.src.replace(/\.(mp4|webm|ogg)$/i, ".webp");
 
                     return (
                         <SwiperSlide key={index}>
                             <div className="relative w-full h-full">
                                 {isVideo ? (
-                                    <>
-                                        {/* Fallback Image */}
-                                        <Image
-                                            src={thumbnail}
-                                            alt={`Thumbnail for ${slide.heading}`}
-                                            fill
-                                            className="object-cover z-0"
-                                            priority={index === 0}
-                                        />
-
-                                        {/* Video Layer */}
-                                        <video
-                                            autoPlay
-                                            muted
-                                            loop
-                                            playsInline
-                                            className="absolute inset-0 w-full h-full object-cover z-10"
-                                            poster={thumbnail}
-                                        >
-                                            <source src={slide.src} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    </>
+                                    <video
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="absolute inset-0 w-full h-full object-cover z-10"
+                                    >
+                                        <source src={slide.src} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
                                 ) : (
                                     <Image
                                         src={slide.src}
-                                        alt={`Slide ${index + 1}`}
+                                        alt={slide.heading}
                                         fill
                                         className="object-cover z-10"
                                         priority={index === 0}
