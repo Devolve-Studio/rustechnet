@@ -13,9 +13,27 @@ export default function ContactPage() {
     };
 
     // @ts-ignore
-    const handleSubmit = (e) => {
+    // @ts-ignore
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        alert('🌠 Message transmitted to the mothership!');
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) throw new Error(data.error || "Something went wrong");
+
+            alert("🌠 Message transmitted to the mothership!");
+            setForm({ name: "", email: "", message: "" });
+        } catch (err) {
+            console.error(err);
+            alert("🛑 Transmission failed. Please try again.");
+        }
     };
 
     return (
