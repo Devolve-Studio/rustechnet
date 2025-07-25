@@ -13,12 +13,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
     {
         src: "/slides/SolarFarm.mp4",
-        heading: "Solar Farms Security",
+        heading: "Solar Farms CCTV Surveillance",
         link: "/contact",
     },
     {
         src: "/slides/WindFarm.mp4",
-        heading: "Wind Farms Security",
+        heading: "Wind Farms CCTV Surveillance",
         link: "/contact",
     },
     {
@@ -31,14 +31,14 @@ const slides = [
         heading: "EPABX Intercom System",
         link: "/contact",
     },
-    //{
-    //    src: "/slides/PASystems.webp",
-    //    heading: "PA Systems",
-    //    link: "/contact",
-    //},
+    {
+        src: "/slides/PASystems.webp",
+        heading: "PA Systems",
+        link: "/contact",
+    },
     {
         src: "/slides/FireAlarm.webp",
-        heading: "Fire Alarm Systems",
+        heading: "Fire Systems",
         link: "/contact",
     },
 ];
@@ -62,7 +62,7 @@ export default function HeroSection() {
             >
                 {slides.map((slide, index) => {
                     const isVideo = /\.(mp4|webm|ogg)$/i.test(slide.src);
-                    const thumbnail = slide.src.replace(/\.(mp4|webm|ogg)$/i, ".jpg");
+                    const thumbnail = slide.src.replace(/\.(mp4|webm|ogg)$/i, ".webp");
 
                     return (
                         <SwiperSlide key={index}>

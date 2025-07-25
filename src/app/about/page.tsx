@@ -232,3 +232,5 @@ export default function AboutUs() {
         </main>
     );
 }
+
+//what we offer services page content every messed up

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
+import { Analytics } from "@vercel/analytics/next"
 
 const roboto = Roboto({
     variable: "--font-orbitron",
@@ -118,6 +119,7 @@ export default function RootLayout({
       <Header />
       <div className="mt-25" />
         {children}
+          <Analytics />
       <Footer />
       </PreloaderWrapper>
       <script type="application/ld+json" suppressHydrationWarning>

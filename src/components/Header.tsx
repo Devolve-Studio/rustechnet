@@ -99,7 +99,7 @@ export default function Header() {
                     <motion.div
                         ref={logoRef}
                         className="inline-block text-left"
-                        whileHover={{ scale: 1.1, rotate: 2 }}
+                        whileHover={{ scale: 1.1}} //rotate: 2
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <Link href="/" className="block">

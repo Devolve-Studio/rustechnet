@@ -40,21 +40,21 @@ export default function ServicesSection() {
                     <motion.div
                         key={idx}
                         whileHover={{ scale: 1.03 }}
-                        className="group relative h-[340px] bg-[#ededed] dark:bg-[#111111] overflow-hidden rounded-xl shadow-xl transition-all duration-300"
+                        className="group relative h-[340px] bg-[#ededed] dark:bg-[#111111] overflow-hidden rounded-xl shadow-xl transition-all duration-300 text-white hover:text-black"
                     >
-                        <div className="absolute inset-0 z-0 opacity-20 group-hover:opacity-100 transition-opacity duration-1000">
+                        <div className="absolute inset-0 z-0 opacity-60 group-hover:opacity-100 transition-opacity duration-1000">
                             <Image
                                 src={item.icon}
                                 alt={item.title}
                                 fill
-                                className="object-cover object-center filter blur-[1px] brightness-[0.9]"
+                                className="object-cover object-center filter brightness-[1.2]"
                             />
                         </div>
                         <div className="relative z-10 flex flex-col items-center justify-center text-center p-6 h-full">
-                            <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+                            <h3 className="text-xl font-semibold mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-sm opacity-80 text-black dark:text-white">
+                            <p className="text-sm opacity-80">
                                 {item.desc}
                             </p>
                         </div>

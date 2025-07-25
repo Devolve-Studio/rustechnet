@@ -20,14 +20,14 @@ return(
                     role: "-Amplus Iru Pvt Ltd."
                 },
                 {
-                    quote: "Quick deployment and seamless integration with our existing infrastructure.",
+                    quote: "Their expert design and technical team had connected each turbine as PSS through existing fiber connectivity and live the CCTV Cameras.",
                     name: "Mr. Bablu Dale",
                     role: "-JSW Energy Ltd."
                 },
                 {
-                    quote: "Their system detected an attempted breach within 10 seconds. Absolutely game-changing.",
-                    name: "Mr. Hitesh Chavda",
-                    role: "-Opera Energy Pvt. Ltd."
+                    quote: "Our Karnataka location solar farm is now secure with Rustechnet's installed advanced CCTV systems.",
+                    name: "Mr. Durga Prasad G.",
+                    role: "-Solaris Electrical Services Pvt. Ltd."
                 },
                 {
                     quote: "Our wind farm is now fully protected and automated, no blind spots anymore.",
