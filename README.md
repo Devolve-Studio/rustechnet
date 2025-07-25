@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RUS Technet Solutions Pvt. Ltd.
 
-## Getting Started
+**Official Website**  
+https://rustechnet.com
 
-First, run the development server:
+RUS Technet Solutions Pvt. Ltd. is a leading industrial security systems provider specializing in:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- AI-powered CCTV surveillance
+- Fire alarm & detection systems
+- EPABX and PA solutions
+- LAN networking and infrastructure
+- Annual maintenance contracts (AMC)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We serve green energy farms, industrial facilities, and government institutions across India — with a focus on fast deployment, AI-driven monitoring, and energy-efficient systems.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚡ Key Features
 
-## Learn More
+- ✅ Modern, responsive design with light/dark mode
+- ✅ SEO-optimized with meta tags and sitemap
+- ✅ Fast performance and mobile-first layout
+- ✅ Built with privacy, accessibility, and user experience in mind
+- ✅ Hosted securely on Vercel infrastructure
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Service Footprint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+We’ve delivered projects in:
+- **Gujarat**
+- **Maharashtra**
+- **Karnataka**
+- **Tamil Nadu**
 
-## Deploy on Vercel
+Our experience spans across solar and wind farms, renewable energy hubs, and government-backed infrastructure.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Powered By
+
+This website is developed and maintained by  
+**[Devolve Studio](https://devolvestudio.space)** in collaboration with  
+**[Devansh Rajan (Astronaut)](https://devanshrajan.me)**
+
+---
+
+© RUS Technet Solutions Pvt. Ltd. — All rights reserved.

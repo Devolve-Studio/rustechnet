@@ -1,3 +1,5 @@
 blue = #00a86b
 orange = #ff931e
+green = #00A650
+bg = #ededed
 #D63C35
