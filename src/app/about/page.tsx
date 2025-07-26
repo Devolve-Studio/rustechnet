@@ -3,14 +3,46 @@
 'use client'
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+//import Image from "next/image";
 import Link from "next/link";
 import HeroBanner from "@/components/HeroBanner";
-import Timeline from "@/components/Timeline";
+//import Timeline from "@/components/Timeline";
 import MissionSection from "@/components/MissionSection";
 import MapContent from "@/components/MapContent";
-import DirectorsMessage from "@/components/DirectorsMessage";
+//import DirectorsMessage from "@/components/DirectorsMessage";
 import ProjectsScroller from "@/components/ProjectsScroller";
+import CeoBlock from '@/components/CeoBlock';
+
+const ceos = [
+    {
+        image: '/directors/HimanshuThakor.webp',
+        quote: [
+            { text: 'We don’t just install cameras — we build safety systems that breathe ', bold: false },
+            { text: 'with the rhythm of the wind, and shine with the sun.', bold: false },
+        ],
+        writer: [{ text: '- Himanshu Thakor', bold: false }],
+        position: [{ text: 'Managing Director', bold: true }],
+    },
+    {
+        image: '/directors/MayurThakor.webp',
+        quote: [
+            { text: 'In every frame we capture, we commit to peace of mind and', bold: false },
+            { text: ' uninterrupted clarity.', bold: false },
+        ],
+        writer: [{ text: '-Mayur Thakor', bold: true }],
+        position: [{ text: 'Managing Director', bold: true }],
+    },
+    {
+        image: '/directors/HimanshuPatel.webp',
+        quote: [
+            { text: 'Technology is only powerful when paired with trust — that\'s what we', bold: false },
+            { text: 'aim to earn with every installation.', bold: false },
+        ],
+        writer: [{ text: '-Himanshu Patel', bold: true }],
+        position: [{ text: 'Managing Director', bold: true }],
+    },
+];
+
 
 export default function AboutUs() {
 
@@ -19,7 +51,7 @@ export default function AboutUs() {
             {/* Hero Section */}
             <HeroBanner
                 // @ts-ignore
-                heading={["Empowering Green Security"]}
+                heading={["Smart Surveillance For a Greener future"]}
                 subheading={[
                     // @ts-ignore
                     "RTSPL pioneers CCTV surveillance and fire safety solutions for solar and wind energy infrastructures across India"                    // @ts-ignore
@@ -157,8 +189,16 @@ export default function AboutUs() {
             {/* Timeline Section */}
             {/*<Timeline />*/}
 
-            {/* Director Messages Section */}
-            <DirectorsMessage />
+            {/* Director Messages Section
+            <DirectorsMessage />*/}
+
+            {ceos.map((ceo, index) => (
+                <CeoBlock
+                    key={index}
+                    {...ceo}
+                    reverse={index % 2 === 0} // alternate every second
+                />
+            ))}
 
             <MissionSection />
 

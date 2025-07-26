@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const roboto = Roboto({
     variable: "--font-orbitron",
@@ -119,6 +120,7 @@ export default function RootLayout({
       <Header />
       <div className="mt-25" />
         {children}
+          <SpeedInsights />
           <Analytics />
       <Footer />
       </PreloaderWrapper>
