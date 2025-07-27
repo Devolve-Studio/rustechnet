@@ -12,8 +12,9 @@ import MapContent from "@/components/MapContent";
 //import DirectorsMessage from "@/components/DirectorsMessage";
 import ProjectsScroller from "@/components/ProjectsScroller";
 import CeoBlock from '@/components/CeoBlock';
+import { AnimatedTestimonials } from "@/components/AnimatedCeoQuotes";
 
-const ceos = [
+{/*const ceos = [
     {
         image: '/directors/HimanshuThakor.webp',
         quote: [
@@ -41,8 +42,7 @@ const ceos = [
         writer: [{ text: '-Himanshu Patel', bold: true }],
         position: [{ text: 'Managing Director', bold: true }],
     },
-];
-
+];*/}
 
 export default function AboutUs() {
 
@@ -192,13 +192,15 @@ export default function AboutUs() {
             {/* Director Messages Section
             <DirectorsMessage />*/}
 
-            {ceos.map((ceo, index) => (
+            {/*{ceos.map((ceo, index) => (
                 <CeoBlock
                     key={index}
                     {...ceo}
                     reverse={index % 2 === 0} // alternate every second
                 />
-            ))}
+            ))}*/}
+
+            <AnimatedTestimonials />
 
             <MissionSection />
 

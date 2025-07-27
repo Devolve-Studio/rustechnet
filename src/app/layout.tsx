@@ -36,6 +36,9 @@ export const metadata = {
         default: "Rustechnet",
         template: "%s | Rustechnet"
     },
+    icons: {
+        apple: '/apple-touch-icon.png',
+    },
     description: "Smart surveillance for a greener solution.",
     keywords: [
         "CCTV for solar farms", "CCTV for wind farms", "solar CCTV India", "wind energy surveillance",

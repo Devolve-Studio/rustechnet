@@ -13,6 +13,7 @@
     "@react-three/drei": "^10.4.2",
     "@react-three/fiber": "^9.2.0",
     "@splinetool/react-spline": "^4.0.0",
+    "@tabler/icons-react": "^3.34.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
@@ -45,7 +46,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
-    "tw-animate-css": "^1.3.4",
+    "tw-animate-css": "^1.3.6",
     "typescript": "^5"
   }
 }
