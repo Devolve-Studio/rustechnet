@@ -5,7 +5,6 @@ import HeroSecion from "@/components/HeroSecion";
 import StatsCounterSection from "@/components/StatsCounterSection";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import FooterBanner from "@/components/FooterBanner";
 import CoreServices from "@/components/CoreServices";
 import ClientsScroller from "@/components/ClientsScroller";

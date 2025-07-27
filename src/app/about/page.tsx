@@ -3,46 +3,12 @@
 'use client'
 
 import { motion } from "framer-motion";
-//import Image from "next/image";
 import Link from "next/link";
 import HeroBanner from "@/components/HeroBanner";
-//import Timeline from "@/components/Timeline";
 import MissionSection from "@/components/MissionSection";
 import MapContent from "@/components/MapContent";
-//import DirectorsMessage from "@/components/DirectorsMessage";
 import ProjectsScroller from "@/components/ProjectsScroller";
-import CeoBlock from '@/components/CeoBlock';
-import { AnimatedTestimonials } from "@/components/AnimatedCeoQuotes";
-
-{/*const ceos = [
-    {
-        image: '/directors/HimanshuThakor.webp',
-        quote: [
-            { text: 'We don’t just install cameras — we build safety systems that breathe ', bold: false },
-            { text: 'with the rhythm of the wind, and shine with the sun.', bold: false },
-        ],
-        writer: [{ text: '- Himanshu Thakor', bold: false }],
-        position: [{ text: 'Managing Director', bold: true }],
-    },
-    {
-        image: '/directors/MayurThakor.webp',
-        quote: [
-            { text: 'In every frame we capture, we commit to peace of mind and', bold: false },
-            { text: ' uninterrupted clarity.', bold: false },
-        ],
-        writer: [{ text: '-Mayur Thakor', bold: true }],
-        position: [{ text: 'Managing Director', bold: true }],
-    },
-    {
-        image: '/directors/HimanshuPatel.webp',
-        quote: [
-            { text: 'Technology is only powerful when paired with trust — that\'s what we', bold: false },
-            { text: 'aim to earn with every installation.', bold: false },
-        ],
-        writer: [{ text: '-Himanshu Patel', bold: true }],
-        position: [{ text: 'Managing Director', bold: true }],
-    },
-];*/}
+import CeoQuote from "@/components/CeoQuote";
 
 export default function AboutUs() {
 
@@ -189,18 +155,7 @@ export default function AboutUs() {
             {/* Timeline Section */}
             {/*<Timeline />*/}
 
-            {/* Director Messages Section
-            <DirectorsMessage />*/}
-
-            {/*{ceos.map((ceo, index) => (
-                <CeoBlock
-                    key={index}
-                    {...ceo}
-                    reverse={index % 2 === 0} // alternate every second
-                />
-            ))}*/}
-
-            <AnimatedTestimonials />
+            <CeoQuote />
 
             <MissionSection />
 
