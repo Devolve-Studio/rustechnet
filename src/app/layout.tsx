@@ -37,6 +37,7 @@ export const metadata = {
         template: "%s | Rustechnet"
     },
     icons: {
+        icon: '/favicon.ico',
         apple: '/apple-touch-icon.png',
     },
     description: "Smart surveillance for a greener solution.",

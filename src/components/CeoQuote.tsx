@@ -25,21 +25,21 @@ const CeoQuote: React.FC<DirectorsMessageProps> = ({
                                                                        id: "1",
                                                                        name: "Himanshu Thakor",
                                                                        designation: "Managing Director",
-                                                                       image: "/directors/HimanshuThakor.jpg",
+                                                                       image: "/directors/HimanshuThakor.webp",
                                                                        quote: "Our commitment to excellence drives everything we do. We believe in creating value not just for our shareholders, but for our employees, customers, and the communities we serve."
                                                                    },
                                                                    {
                                                                        id: "2",
                                                                        name: "Mayur Thakor",
                                                                        designation: "Managing Director",
-                                                                       image: "/directors/MayurThakor.jpg",
+                                                                       image: "/directors/MayurThakor.webp",
                                                                        quote: "Innovation is at the heart of our strategy. We're constantly pushing boundaries to deliver cutting-edge solutions that transform industries and improve lives."
                                                                    },
                                                                    {
                                                                        id: "3",
                                                                        name: "Himanshu Patel",
                                                                        designation: "Managing Director",
-                                                                       image: "/directors/HimanshuPatel.jpg",
+                                                                       image: "/directors/HimanshuPatel.webp",
                                                                        quote: "Innovation is at the heart of our strategy. We're constantly pushing boundaries to deliver cutting-edge solutions that transform industries and improve lives."
                                                                    }
                                                                ],
@@ -94,8 +94,8 @@ const CeoQuote: React.FC<DirectorsMessageProps> = ({
                             {/* Director Image */}
                             <div className={`relative overflow-hidden rounded-2xl ${
                                 isSingleDirector
-                                    ? "w-full lg:w-1/2 aspect-[4/5] lg:aspect-[3/4]"
-                                    : "w-full aspect-[4/5] mb-6"
+                                    ? "w-full lg:w-1/2 aspect-[4/5] lg:aspect-[4/5]"
+                                    : "w-full aspect-[41/56] mb-6"
                             }`}>
                                 <motion.img
                                     src={director.image}

@@ -30,9 +30,9 @@ return(
                     role: "-Solaris Electrical Services Pvt. Ltd."
                 },
                 {
-                    quote: "Our wind farm is now fully protected and automated, no blind spots anymore.",
-                    name: "Mr. Bala Prajapati",
-                    role: "-Amplus Iru Pvt Ltd."
+                    quote: "Our wind farm is now totally secure with Rustechnet's advanced CCTV systems.",
+                    name: "Mr.KM Shuvan",
+                    role: "-Fourth Partner Energy"
                 },
                 {
                     quote: "Quick deployment and seamless integration with our existing infrastructure.",
