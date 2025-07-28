@@ -25,7 +25,6 @@ export default function Header() {
         restDelta: 0.001
     });
 
-    const yTransform = useTransform(scrollYProgress, [0, 0.15], [0, -80]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.15], [1, 0.5]);
 
     useEffect(() => {
@@ -103,18 +102,19 @@ export default function Header() {
                         transition={{ type: "spring", stiffness: 300 }}
                     >
                         <Link href="/" className="block">
-                            <h1 className="text-[42px] sm:text-[42px] font-extrabold text-[#00A650] lowercase leading-none tracking-wider select-none pointer-events-none cursor-default">
+                            <Image src="/logo.png" alt="RUS Technet" width={250} height={200} />
+                            {/*<h1 className="text-[42px] sm:text-[42px] !roboto-slab font-extrabold text-[#00A650] lowercase leading-none tracking-wider select-none pointer-events-none cursor-default">
                                 rustechnet
                             </h1>
                             <p className="text-[10px] sm:text-[10px] text-[#00A650] uppercase mt-1">
                                 Smart Surveillance For A Greener Future
-                            </p>
+                            </p>*/}
                         </Link>
                     </motion.div>
 
 
                     <nav className="hidden md:flex gap-6 text-sm font-semibold uppercase">
-                        {pages.map((link, index) => (
+                        {pages.map((link) => (
                             <motion.div
                                 key={link.href}
                                 className="nav-item"

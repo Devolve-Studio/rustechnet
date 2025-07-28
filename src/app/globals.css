@@ -61,8 +61,17 @@
   background-color: #a3a3a3;
   color: #ffffff;
 }
+.roboto-slab {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700; /* Use 400, 700, or 900 as needed */
+  letter-spacing: -0.5px; /* Optional: tighter tracking like your logo */
+  font-size: 2rem; /* Adjust based on usage */
+  line-height: 1.2;
+  color: #2e7d32; /* Optional: matches your green branding */
+  text-transform: none; /* Or 'uppercase' if tagline style */
+}
 body {
-  font-family: Roboto, Orbitron, Arial, Helvetica, sans-serif !important;
+  font-family: Roboto, Orbitron, Arial, Helvetica, Lora, "Bookman Old Style", sans-serif !important;
   scroll-behavior: smooth;
 }
 h1, h2, h3, h4 {
