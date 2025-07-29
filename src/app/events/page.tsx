@@ -19,9 +19,9 @@ const events = [
         image: "/projects/project2.webp"
     },
     {
-        title: "Fourth Partner Energy",
+        title: "Serentica Energy",
         date: "Nov 2025",
-        location: "Karnataka, India",
+        location: "Maharashtra, India",
         desc: "A landmark event where we launched our hybrid grid-connected monitoring ecosystem.",
         image: "/projects/project3.webp"
     }
