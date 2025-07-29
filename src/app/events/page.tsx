@@ -19,7 +19,7 @@ const events = [
         image: "/projects/project2.webp"
     },
     {
-        title: "Serentica Energy",
+        title: "Serentica Renewables",
         date: "Nov 2025",
         location: "Maharashtra, India",
         desc: "A landmark event where we launched our hybrid grid-connected monitoring ecosystem.",
