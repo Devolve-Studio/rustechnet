@@ -166,7 +166,7 @@ export default function AboutUs() {
                 <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,_transparent_1px)] [background-size:30px_30px] opacity-10 z-0" />{/*dark:bg-[radial-gradient(#00a86b_1px,_transparent_1px)] dark:[background-size:30px_30px] dark:opacity-5*/}
 
                 <MapContent
-                activeStates={["Gujarat", "Maharashtra", "Karnataka", "Tamil Nadu"]}
+                activeStates={["Gujarat", "Maharashtra","Telangana", "Karnataka", "Andhra Pradesh", "Tamil Nadu",]}
             />
                 <ProjectsScroller
                     projects={[
@@ -189,12 +189,24 @@ export default function AboutUs() {
                             ],
                         },
                         {
+                            state: "Telangana",
+                            companies: [
+                                "Fourth Partner Energy Pvt. Ltd.",
+                            ],
+                        },
+                        {
                             state: "Karnataka",
                             companies: [
                                 "JSW Renewable Energy Pvt. Ltd.",
                                 "Fourth Partner Energy Pvt. Ltd.",
                                 "Solaris Electrical Services Pvt. Ltd.",
                             ],
+                        },
+                        {
+                            state: "Andhra Pradesh",
+                            companies: [
+                                "Sri Venkateswara Swamy Temple (Tirumala Tirupathi Devasthanam)",
+                        ],
                         },
                         {
                             state: "Tamil Nadu",

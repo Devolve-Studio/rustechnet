@@ -8,7 +8,7 @@ interface ProjectMapProps {
 }
 
 const stateCoordinates: Record<string, { top: number; left: number }> = {
-    "Andhra Pradesh": { top: 65, left: 60 },
+    "Andhra Pradesh": { top: 77, left: 35 },
     "Arunachal Pradesh": { top: 30, left: 95 },
     Assam: { top: 33, left: 85 },
     Bihar: { top: 40, left: 70 },
@@ -31,7 +31,7 @@ const stateCoordinates: Record<string, { top: number; left: number }> = {
     Rajasthan: { top: 40, left: 40 },
     Sikkim: { top: 30, left: 75 },
     "Tamil Nadu": { top: 87, left: 33 },
-    Telangana: { top: 65, left: 58 },
+    Telangana: { top: 68, left: 35 },
     Tripura: { top: 37, left: 90 },
     "Uttar Pradesh": { top: 35, left: 60 },
     Uttarakhand: { top: 28, left: 58 },

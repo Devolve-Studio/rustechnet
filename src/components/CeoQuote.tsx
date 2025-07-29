@@ -30,17 +30,17 @@ const CeoQuote: React.FC<DirectorsMessageProps> = ({
                                                                    },
                                                                    {
                                                                        id: "2",
-                                                                       name: "Mayur Thakor",
-                                                                       designation: "Managing Director",
-                                                                       image: "/directors/MayurThakor.webp",
-                                                                       quote: "Innovation is at the heart of our strategy. We're constantly pushing boundaries to deliver cutting-edge solutions that transform industries and improve lives."
-                                                                   },
-                                                                   {
-                                                                       id: "3",
                                                                        name: "Himanshu Patel",
                                                                        designation: "Managing Director",
                                                                        image: "/directors/HimanshuPatel.webp",
                                                                        quote: "Innovation fuels our mission. We relentlessly explore new frontiers to create bold solutions that reshape industries and enrich lives."
+                                                                   },
+                                                                   {
+                                                                       id: "3",
+                                                                       name: "Mayur Thakor",
+                                                                       designation: "Managing Director",
+                                                                       image: "/directors/MayurThakor.webp",
+                                                                       quote: "Innovation is at the heart of our strategy. We're constantly pushing boundaries to deliver cutting-edge solutions that transform industries and improve lives."
                                                                    }
                                                                ],
                                                                title = "Message from the Leadership",

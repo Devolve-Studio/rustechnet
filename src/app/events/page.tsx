@@ -5,25 +5,25 @@ import Image from 'next/image';
 
 const events = [
     {
-        title: "GreenTech Conclave",
-        date: "July 2024",
-        location: "Ahmedabad, India",
+        title: "Powerica Limited",
+        date: "July 2023",
+        location: "Gujarat, India",
         desc: "Our team unveiled the next-gen solar surveillance AI at one of India's leading green expos.",
-        image: "/events/greentech.webp"
+        image: "/projects/project1.webp"
     },
     {
-        title: "Wind & Wire Summit",
-        date: "May 2024",
-        location: "Bangalore, India",
+        title: "Amplus Iru Pvt. Ltd.",
+        date: "May 2025",
+        location: "Haryana, India",
         desc: "RTSPL showcased long-range turbine monitoring and hosted a security workshop.",
-        image: "/events/windwire.webp"
+        image: "/projects/project2.webp"
     },
     {
-        title: "SecureGrid 2023",
-        date: "Nov 2023",
-        location: "Vadodara HQ",
+        title: "Fourth Partner Energy",
+        date: "Nov 2025",
+        location: "Karnataka, India",
         desc: "A landmark event where we launched our hybrid grid-connected monitoring ecosystem.",
-        image: "/events/securegrid.webp"
+        image: "/projects/project3.webp"
     }
 ];
 
