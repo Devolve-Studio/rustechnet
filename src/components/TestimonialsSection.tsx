@@ -36,8 +36,8 @@ return(
                 },
                 {
                     quote: "Quick deployment and seamless integration with our existing infrastructure.",
-                    name: "Mr. Bablu Dale",
-                    role: "-JSW Energy Ltd."
+                    name: "Mr.Darshan Sojitra",
+                    role: "-Onix Renewable Ltd"
                 }
             ].map((testimonial, idx) => (
                 <motion.div

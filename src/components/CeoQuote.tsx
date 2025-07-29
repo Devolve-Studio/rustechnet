@@ -40,7 +40,7 @@ const CeoQuote: React.FC<DirectorsMessageProps> = ({
                                                                        name: "Himanshu Patel",
                                                                        designation: "Managing Director",
                                                                        image: "/directors/HimanshuPatel.webp",
-                                                                       quote: "Innovation is at the heart of our strategy. We're constantly pushing boundaries to deliver cutting-edge solutions that transform industries and improve lives."
+                                                                       quote: "Innovation fuels our mission. We relentlessly explore new frontiers to create bold solutions that reshape industries and enrich lives."
                                                                    }
                                                                ],
                                                                title = "Message from the Leadership",
