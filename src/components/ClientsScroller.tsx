@@ -11,7 +11,7 @@ const logos = [
     "c1.webp", "c2.webp", "c3.webp", "c4.webp", "c5.webp",
     "c6.webp", "c7.webp", "c8.webp", "c9.webp", "c10.webp",
     "c11.webp", /*"c12.webp", "c13.webp",*/ "c14.webp", "c15.webp",
-    "c16.webp", "c17.webp", "c18.webp",
+    "c16.webp", "c17.webp", "c18.webp", "c19.webp",
 ];
 
 export default function ClientsSliderInfinite() {
