@@ -14,7 +14,7 @@ const events = [
     {
         title: "Amplus Iru Pvt. Ltd.",
         date: "May 2025",
-        location: "Haryana, India",
+        location: "Tamilnadu, India",
         desc: "RTSPL showcased long-range turbine monitoring and hosted a security workshop.",
         image: "/projects/project2.webp"
     },
