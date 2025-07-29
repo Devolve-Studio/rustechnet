@@ -83,6 +83,7 @@ export default function HeroSection() {
                                         fill
                                         className="object-cover z-10"
                                         priority={index === 0}
+                                        loading="eager"
                                     />
                                 )}
 

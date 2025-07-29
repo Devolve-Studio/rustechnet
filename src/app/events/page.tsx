@@ -51,8 +51,8 @@ export default function EventsPage() {
                         transition={{ delay: i * 0.1, duration: 0.6 }}
                         className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition"
                     >
-                        <div className="relative w-full h-56">
-                            <Image src={event.image} alt={event.title} fill className="object-cover" />
+                        <div className="relative w-full h-128">
+                            <Image src={event.image} alt={event.title} fill className="object-cover" loading="lazy" />
                         </div>
                         <div className="p-6">
                             <h3 className="text-xl font-semibold mb-1">{event.title}</h3>
