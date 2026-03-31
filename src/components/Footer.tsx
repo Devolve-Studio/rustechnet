@@ -150,9 +150,6 @@ export default function Footer() {
             {/* Footer Bottom */}
             <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-500">
                 <p className="!text-sm">© {new Date().getFullYear()} RUS Technet Solutions Pvt. Ltd.</p>
-                <p className="mt-1 !text-sm">
-                    Built by <a href="https://devolvestudio.space" target="_blank" className="text-white hover:text-[#00a86b] font-semibold">Devolve Studio</a>
-                </p>
             </div>
         </footer>
     );
