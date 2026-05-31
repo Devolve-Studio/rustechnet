@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     await fs.mkdir(targetDir, { recursive: true });
 
     const files = await fs.readdir(targetDir);
-    const regex = /^client-(\d+)\.webp$/;
+    const regex = /^c(\d+)\.webp$/;
     
     let highestId = 0;
     for (const fileName of files) {
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       }
     }
 
-    const newFilename = `client-${highestId + 1}.webp`;
+    const newFilename = `c${highestId + 1}.webp`;
     const buffer = Buffer.from(await file.arrayBuffer());
 
     await sharp(buffer)

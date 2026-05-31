@@ -18,8 +18,8 @@ export default async function AdminPage() {
       
       // Sort numerically by ID (newest first)
       images.sort((a, b) => {
-        const matchA = a.match(/^client-(\d+)\.webp$/);
-        const matchB = b.match(/^client-(\d+)\.webp$/);
+        const matchA = a.match(/^c(\d+)\.webp$/);
+        const matchB = b.match(/^c(\d+)\.webp$/);
         const numA = matchA ? parseInt(matchA[1], 10) : 0;
         const numB = matchB ? parseInt(matchB[1], 10) : 0;
         return numB - numA;

@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     }
 
     // Strict validation to prevent directory traversal
-    const regex = /^client-\d+\.webp$/;
+    const regex = /^c\d+\.webp$/;
     if (!regex.test(filename)) {
       return NextResponse.json({ error: 'Invalid filename format' }, { status: 400 });
     }
