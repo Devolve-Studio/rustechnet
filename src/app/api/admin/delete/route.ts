@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
+import { revalidatePath } from 'next/cache';
 
 export async function POST(request: Request) {
   try {
@@ -20,6 +21,10 @@ export async function POST(request: Request) {
 
     try {
       await fs.unlink(filePath);
+      
+      revalidatePath('/', 'layout');
+      revalidatePath('/admin', 'layout');
+      
       return NextResponse.json({ success: true });
     } catch (err: any) {
       if (err.code === 'ENOENT') {

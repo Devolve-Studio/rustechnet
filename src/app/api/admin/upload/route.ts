@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import path from 'path';
 import fs from 'fs/promises';
 import sharp from 'sharp';
+import { revalidatePath } from 'next/cache';
 
 export async function POST(request: Request) {
   try {
@@ -40,6 +41,9 @@ export async function POST(request: Request) {
       .resize(800, null, { withoutEnlargement: true })
       .webp({ quality: 80 })
       .toFile(path.join(targetDir, newFilename));
+
+    revalidatePath('/', 'layout');
+    revalidatePath('/admin', 'layout');
 
     return NextResponse.json({ success: true, filename: newFilename });
   } catch (error) {
