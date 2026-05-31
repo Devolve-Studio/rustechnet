@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Autoplay } from "swiper/modules";
@@ -7,14 +8,24 @@ import "swiper/css";
 
 SwiperCore.use([Autoplay]);
 
-const logos = [
-    "c1.webp", "c2.webp", "c3.webp", "c4.webp", "c5.webp",
-    "c6.webp", "c7.webp", "c8.webp", "c9.webp", "c10.webp",
-    "c11.webp", /*"c12.webp", "c13.webp",*/ "c14.webp", "c15.webp",
-    "c16.webp", "c17.webp", "c18.webp", "c19.webp",
-];
-
 export default function ClientsSliderInfinite() {
+    const [logos, setLogos] = useState<string[]>([]);
+    
+    useEffect(() => {
+        fetch('/api/clients')
+            .then(res => res.json())
+            .then(data => {
+                if (Array.isArray(data)) {
+                    setLogos(data);
+                }
+            })
+            .catch(err => console.error('Failed to load clients:', err));
+    }, []);
+
+    if (logos.length === 0) {
+        return <section className="py-10 text-center opacity-50">Loading clients...</section>;
+    }
+
     return (
         <section>
             <div className="w-[70vw] mx-auto overflow-hidden py-10 hidden md:block">
@@ -29,11 +40,10 @@ export default function ClientsSliderInfinite() {
                 >
                     {[...logos, ...logos].map((logo, idx) => {
                         return (
-                            <SwiperSlide key={idx}>
+                            <SwiperSlide key={`md-${idx}`}>
                                 <picture>
-                                    {/* Dark theme version (fallback) */}
                                     <img
-                                        src={`/clients/${logo}`}
+                                        src={`/client/${logo}`}
                                         alt={`Client ${idx + 1}`}
                                         draggable={false}
                                         unselectable="on"
@@ -57,11 +67,10 @@ export default function ClientsSliderInfinite() {
                 >
                     {[...logos, ...logos].map((logo, idx) => {
                         return (
-                            <SwiperSlide key={idx}>
+                            <SwiperSlide key={`sm-${idx}`}>
                                 <picture>
-                                    {/* Dark theme version (fallback) */}
                                     <img
-                                        src={`/clients/${logo}`}
+                                        src={`/client/${logo}`}
                                         alt={`Client ${idx + 1}`}
                                         draggable={false}
                                         unselectable="on"
