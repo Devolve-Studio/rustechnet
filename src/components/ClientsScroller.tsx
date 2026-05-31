@@ -43,7 +43,7 @@ export default function ClientsSliderInfinite() {
                             <SwiperSlide key={`md-${idx}`}>
                                 <picture>
                                     <img
-                                        src={`/client/${logo}`}
+                                        src={`/clients/${logo}`}
                                         alt={`Client ${idx + 1}`}
                                         draggable={false}
                                         unselectable="on"
@@ -70,7 +70,7 @@ export default function ClientsSliderInfinite() {
                             <SwiperSlide key={`sm-${idx}`}>
                                 <picture>
                                     <img
-                                        src={`/client/${logo}`}
+                                        src={`/clients/${logo}`}
                                         alt={`Client ${idx + 1}`}
                                         draggable={false}
                                         unselectable="on"

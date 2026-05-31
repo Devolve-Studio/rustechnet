@@ -12,7 +12,7 @@ export default async function AdminPage() {
   if (isAuthenticated) {
     let images: string[] = [];
     try {
-      const targetDir = path.join(process.cwd(), 'public', 'client');
+      const targetDir = path.join(process.cwd(), 'public', 'clients');
       const files = await fs.readdir(targetDir);
       images = files.filter(f => f.endsWith('.webp'));
       

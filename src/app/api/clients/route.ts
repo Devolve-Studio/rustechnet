@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 
 export async function GET() {
   try {
-    const targetDir = path.join(process.cwd(), 'public', 'client');
+    const targetDir = path.join(process.cwd(), 'public', 'clients');
     const files = await fs.readdir(targetDir);
     const webpFiles = files.filter(f => f.endsWith('.webp'));
     return NextResponse.json(webpFiles);

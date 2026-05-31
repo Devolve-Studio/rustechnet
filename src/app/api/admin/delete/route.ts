@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid filename format' }, { status: 400 });
     }
 
-    const filePath = path.join(process.cwd(), 'public', 'client', filename);
+    const filePath = path.join(process.cwd(), 'public', 'clients', filename);
 
     try {
       await fs.unlink(filePath);

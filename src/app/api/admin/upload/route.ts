@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Invalid file type. Only images are allowed.' }, { status: 400 });
     }
 
-    const targetDir = path.join(process.cwd(), 'public', 'client');
+    const targetDir = path.join(process.cwd(), 'public', 'clients');
     await fs.mkdir(targetDir, { recursive: true });
 
     const files = await fs.readdir(targetDir);

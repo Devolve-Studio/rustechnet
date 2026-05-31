@@ -95,7 +95,7 @@ export default function AdminGallery({ images }: { images: string[] }) {
             {images.map((img) => (
               <div key={img} className="relative group rounded overflow-hidden border border-gray-200 aspect-square flex items-center justify-center bg-gray-50">
                 <img
-                  src={`/client/${img}`}
+                  src={`/clients/${img}`}
                   alt={img}
                   className="max-w-full max-h-full object-contain p-2"
                 />
