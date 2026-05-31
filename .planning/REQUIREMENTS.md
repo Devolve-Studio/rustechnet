@@ -24,4 +24,6 @@
 - Full Decap CMS integration — too complex for a single section; custom Next.js admin provides exact needed functionality.
 
 ## Traceability
-*(To be populated by roadmap)*
+- **AUTH-01**, **AUTH-02** -> Phase 1
+- **FILE-01**, **FILE-02**, **FILE-03**, **FILE-04** -> Phase 2
+- **INT-01**, **INT-02** -> Phase 3
